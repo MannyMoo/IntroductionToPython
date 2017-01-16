@@ -11792,7 +11792,7 @@ div#notebook {
 <p>This course will take you through the basics of Python and hopefully demonstrate it to be a powerful, intuitive, and generally useful means of programming!</p>
 <p>It's intended to be suitable for novice programmers while still being useful for those with previous experience of other languages, or even of python itself.</p>
 <p>This course is presented in the form of an ipython notebook, which gives full access to the interactive python interpreter. We'll actually be running real python code as we go through the lectures.</p>
-<p>Lectures are a terrible way to teach anything, especially programming, so all the material is available <a href="https://mannymoo.github.io/IntroductionToPython/">online</a>, in static form. You can also download the <a href="https://github.com/MannyMoo/IntroductionToPython">source</a>. If you then install <a href="https://ipython.org/">ipython</a> you can use the interactive form of the notes. I encourage you to do so, and, if you have a laptop, follow the material interactively during the lectures, play about, and ask questions as we go.</p>
+<p>All the material is available <a href="https://mannymoo.github.io/IntroductionToPython/">online</a>, in static form. You can also download the <a href="https://github.com/MannyMoo/IntroductionToPython">source</a>. If you then install <a href="https://ipython.org/">ipython</a> you can use the interactive form of the notes. I encourage you to do so, and, if you have a laptop, follow the material interactively during the lectures, play about, and ask questions as we go.</p>
 
 </div>
 </div>
@@ -12024,9 +12024,9 @@ div#notebook {
 <li>Similary, a change to the algorithm for calculating tax need only be made in the class definition and is then used by every class instance.</li>
 <li>Classes can be as simple or complicated as necessary.</li>
 <li>This allows you to break down a given problem into its most basic components, write a class for each, then build greater complexity on top using instances of these classes.</li>
+<li>You can structure your code so it's maintainable, flexible and extensible (and consequently less prone to bugs). </li>
 </ul>
 </li>
-<li>Allows you to structure your code so it's maintainable, flexible and extensible (and consequently less prone to bugs). </li>
 </ul>
 
 </div>
@@ -12112,6 +12112,7 @@ div#notebook {
 <li>The standard command prompt on Windows isn't very good, so you may wish to consider alternatives like <a href="https://conemu.github.io/">ConEmu</a>, or <a href="https://github.com/cbucher/console">ConsoleZ</a>, or if you want a linux style environment there's <a href="http://www.cygwin.com/">Cygwin</a>.</li>
 </ul>
 </li>
+<li>For ipython, see <a href="http://jupyter.readthedocs.io/en/latest/install.html">here</a>.</li>
 </ul>
 
 </div>
@@ -12170,13 +12171,27 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s">&quot;Hello World!&quot;</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello World!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12209,13 +12224,27 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>python --version
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Python 2.7.13
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12246,13 +12275,29 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="s">&quot;Hello World!&quot;</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello World!&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12272,13 +12317,29 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="mi">10</span><span class="o">+</span><span class="mi">3</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>13</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12312,7 +12373,7 @@ div#notebook {
 <ul>
 <li>The interactive prompt is fine for simple commands, but not much use for more involved work as you can't save code, or go back and edit it.</li>
 <li>For this you want to write your code into a plain text file, normally referred to as a "script", which can then be passed to the python interpreter.</li>
-<li>Any decent text editor can be used to do this, eg, <a href="http://www.gnu.org/software/emacs/">emacs</a> or <a href="http://www.vim.org/">vim</a>, both of which are also available for Windows, or any of the many other options. </li>
+<li>Any decent text editor can be used to do this, eg, <a href="http://www.gnu.org/software/emacs/">emacs</a> or <a href="http://www.vim.org/">vim</a>, both of which are installed by default for most Linux distros, and also available for Windows. Many other options are available.</li>
 <li>Python scripts are usually suffixed with .py (though they don't have to be).</li>
 <li>To put the "Hello world!" command into a script first open a text file with an appropriate name by doing, eg, if you're using emacs:</li>
 </ul>
@@ -12334,7 +12395,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">%%</span><span class="k">writefile</span> hello_world.py
@@ -12342,6 +12403,20 @@ print &quot;Hello world!&quot;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing hello_world.py
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12364,7 +12439,7 @@ print &quot;Hello world!&quot;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Check the contents of the file:</li>
+<li>Check the contents of the file (again, ignore the "!"):</li>
 </ul>
 
 </div>
@@ -12372,13 +12447,26 @@ print &quot;Hello world!&quot;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>cat hello_world.py
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>print &#34;Hello world!&#34;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12397,14 +12485,27 @@ print &quot;Hello world!&quot;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Again, ignore the !</span>
-<span class="o">!</span>python hello_world.py
+<div class=" highlight hl-ipython2"><pre><span class="o">!</span>python hello_world.py
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12435,7 +12536,7 @@ print &quot;Hello world!&quot;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>python hello_world.py &gt; hello_world.log
@@ -12460,13 +12561,27 @@ print &quot;Hello world!&quot;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>cat hello_world.log
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12497,13 +12612,70 @@ print &quot;Hello world!&quot;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>python -h
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>usage: /opt/local/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Options and arguments (and corresponding environment variables):
+-B     : don&#39;t write .py[co] files on import; also PYTHONDONTWRITEBYTECODE=x
+-c cmd : program passed in as string (terminates option list)
+-d     : debug output from parser; also PYTHONDEBUG=x
+-E     : ignore PYTHON* environment variables (such as PYTHONPATH)
+-h     : print this help message and exit (also --help)
+-i     : inspect interactively after running script; forces a prompt even
+         if stdin does not appear to be a terminal; also PYTHONINSPECT=x
+-m mod : run library module as a script (terminates option list)
+-O     : optimize generated bytecode slightly; also PYTHONOPTIMIZE=x
+-OO    : remove doc-strings in addition to the -O optimizations
+-R     : use a pseudo-random salt to make hash() values of various types be
+         unpredictable between separate invocations of the interpreter, as
+         a defense against denial-of-service attacks
+-Q arg : division options: -Qold (default), -Qwarn, -Qwarnall, -Qnew
+-s     : don&#39;t add user site directory to sys.path; also PYTHONNOUSERSITE
+-S     : don&#39;t imply &#39;import site&#39; on initialization
+-t     : issue warnings about inconsistent tab usage (-tt: issue errors)
+-u     : unbuffered binary stdout and stderr; also PYTHONUNBUFFERED=x
+         see man page for details on internal buffering relating to &#39;-u&#39;
+-v     : verbose (trace import statements); also PYTHONVERBOSE=x
+         can be supplied multiple times to increase verbosity
+-V     : print the Python version number and exit (also --version)
+-W arg : warning control; arg is action:message:category:module:lineno
+         also PYTHONWARNINGS=arg
+-x     : skip first line of source, allowing use of non-Unix forms of #!cmd
+-3     : warn about Python 3.x incompatibilities that 2to3 cannot trivially fix
+file   : program read from script file
+-      : program read from stdin (default; interactive mode if a tty)
+arg ...: arguments passed to program in sys.argv[1:]
+
+Other environment variables:
+PYTHONSTARTUP: file executed on interactive startup (no default)
+PYTHONPATH   : &#39;:&#39;-separated list of directories prefixed to the
+               default module search path.  The result is sys.path.
+PYTHONHOME   : alternate &lt;prefix&gt; directory (or &lt;prefix&gt;:&lt;exec_prefix&gt;).
+               The default module search path uses &lt;prefix&gt;/pythonX.X.
+PYTHONCASEOK : ignore case in &#39;import&#39; statements (Windows).
+PYTHONIOENCODING: Encoding[:errors] used for stdin/stdout/stderr.
+PYTHONHASHSEED: if this variable is set to &#39;random&#39;, the effect is the same
+   as specifying the -R option: a random value is used to seed the hashes of
+   str, bytes and datetime objects.  It can also be set to an integer
+   in the range [0,4294967295] to get hash values with a predictable seed.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12531,7 +12703,7 @@ print &quot;Hello world!&quot;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">%%</span><span class="k">writefile</span> hello_world.py
@@ -12540,6 +12712,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting hello_world.py
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12582,7 +12768,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>chmod +x hello_world.py
@@ -12599,7 +12785,7 @@ print &#39;Hello world!&#39;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>So it can be called simply by doing (remember to ignore the ! when working on the commandline):</li>
+<li>So it can be called simply by doing:</li>
 </ul>
 
 </div>
@@ -12607,13 +12793,27 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>./hello_world.py
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12755,7 +12955,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
@@ -12765,10 +12965,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Integer (int) division returns the floor (hashes precede a  </span>
@@ -12780,10 +12996,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">-</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span>
@@ -12793,10 +13025,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A number containing a decimal point is interpreted as a </span>
@@ -12808,10 +13056,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The usual operator precedence applies</span>
@@ -12822,10 +13086,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>7</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># As do parenthesis rules</span>
@@ -12836,10 +13116,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Integer remainder</span>
@@ -12850,10 +13146,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Remainder also works on floats</span>
@@ -12864,10 +13176,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If all variables are ints the result is an int</span>
@@ -12878,10 +13204,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>16</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If one is a float, the result is a float</span>
@@ -12892,10 +13234,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>16.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># At the interactive prompt the last value that was output is assigned to </span>
@@ -12907,10 +13265,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>16.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">_</span> <span class="o">+</span> <span class="mf">7.5</span>
@@ -12920,16 +13294,48 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>23.5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">_</span> <span class="o">*</span> <span class="mf">1.204</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>28.294</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12945,7 +13351,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># As simple as this, no type declaration is needed. Just name the</span>
@@ -12960,10 +13366,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can assign variables from other variables.</span>
@@ -12975,10 +13397,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The same value can be assigned to several variables simultaneously </span>
@@ -12991,10 +13429,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.0, 0.0, 0.0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Or to give different values separate them with commas</span>
@@ -13006,18 +13460,19 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1, 2, 3)</pre>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Several commands on one line can be separated by semi-colons</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
-</pre></div>
 
 </div>
+
 </div>
 </div>
 
@@ -13042,7 +13497,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A number without a decimal point is an int</span>
@@ -13062,10 +13517,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>123 &lt;type &#39;int&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Suffix an int with &quot;l&quot; or &quot;L&quot; to make a long int (allows larger values)</span>
@@ -13079,10 +13548,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>123456789 &lt;type &#39;long&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A 0 prefix causes a number to be interpreted as an octal number,</span>
@@ -13095,10 +13578,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8 &lt;type &#39;int&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Similarly for hexidecimal numbers prefix with 0x</span>
@@ -13110,10 +13607,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>15 &lt;type &#39;int&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Anything with a decimal point or in scientific notation is a float.</span>
@@ -13130,10 +13641,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>123.0 &lt;type &#39;float&#39;&gt;
+1000000.0 &lt;type &#39;float&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Python also has a builtin complex number class.</span>
@@ -13146,10 +13672,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1+2j) &lt;type &#39;complex&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can also use the complex class constructor.</span>
@@ -13161,10 +13701,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(3+4j) &lt;type &#39;complex&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Real and imaginary parts are stored as floats.</span>
@@ -13177,10 +13731,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.0 &lt;type &#39;float&#39;&gt;
+4.0 &lt;type &#39;float&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Also use &#39;.&#39; for member methods.</span>
@@ -13189,6 +13758,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(3-4j) &lt;type &#39;complex&#39;&gt;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13204,7 +13787,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Boolean types start with capital letters</span>
@@ -13218,10 +13801,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True &lt;type &#39;bool&#39;&gt;
+False &lt;type &#39;bool&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Particularly relevant for comparisons</span>
@@ -13233,10 +13831,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can also assign from comparisons</span>
@@ -13248,10 +13861,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True &lt;type &#39;bool&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Be careful of using builtin types as variable names.</span>
@@ -13265,10 +13892,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>123 &lt;type &#39;int&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Comparisons still return the expected type though.</span>
@@ -13279,10 +13920,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># And you can recover the builtin type by deleting the variable </span>
@@ -13292,6 +13947,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True &lt;type &#39;bool&#39;&gt;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13307,7 +13976,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># We already saw a string in &#39;Hello world!&#39;</span>
@@ -13320,10 +13989,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sir Gallahad
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Brave Sir Robin&quot;</span>
@@ -13334,10 +14017,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Brave Sir Robin
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A string can contain quotation marks.</span>
@@ -13351,10 +14048,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[48]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;He&#39;s running away&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="s">&#39;He</span><span class="se">\&#39;</span><span class="s">s chickening out&#39;</span>
@@ -13364,10 +14077,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[49]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;He&#39;s chickening out&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can continue a string onto the next line with a backslash</span>
@@ -13380,10 +14109,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Brave Sir Robin ran away&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Multi-line strings use triple quotes - can also use &#39;&#39;&#39;</span>
@@ -13398,10 +14143,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[51]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Boldly ran\n away\n  away ...&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Spaces at the start of lines are kept</span>
@@ -13412,10 +14173,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Boldly ran
+ away
+  away ...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If not assigned to a variable (and not the only thing in a script)</span>
@@ -13433,7 +14210,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can concatenate strings with +</span>
@@ -13444,13 +14221,30 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and eggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># You can optionally omit the + as python implicitly concatenates two strings declared</span>
+<div class=" highlight hl-ipython2"><pre><span class="c"># You can optionally omit the + as python implicitly concatenates </span>
+<span class="c"># two strings declared</span>
 <span class="c"># side-by-side (the case above is explicit concatenation).</span>
 <span class="s">&#39;Spam &#39;</span> <span class="s">&#39;and eggs&#39;</span>
 </pre></div>
@@ -13459,10 +14253,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[55]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and eggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Again single or double quotes doesn&#39;t matter.</span>
@@ -13473,10 +14283,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[56]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and eggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can also multiply strings by integers</span>
@@ -13487,10 +14313,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[57]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam Spam Spam &#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Strings have lots of member methods, eg</span>
@@ -13502,10 +14344,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[58]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;SPAM AND EGGS&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Note that these methods return new strings, and don&#39;t change the original.</span>
@@ -13517,10 +14375,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and spam&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">menu</span>
@@ -13530,10 +14404,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and eggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can access single characters in a string using indexing</span>
@@ -13546,10 +14436,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;m&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Python also allows negative indices, which count from the end </span>
@@ -13562,10 +14468,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[62]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;e&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can also access slices of a string like so:</span>
@@ -13576,10 +14498,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[63]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;pa&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Omitting the first index is equivalent to it being 0</span>
@@ -13590,10 +14528,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[64]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spa&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Omitting the second index is the same as it being equal to the nubmer of characters in the </span>
@@ -13605,10 +14559,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[65]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;m and eggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># So this returns the original string:</span>
@@ -13619,10 +14589,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and eggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Negative indices are also allowed when slicing.</span>
@@ -13634,10 +14620,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[67]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ggs&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># This gives everything but the last 3 characters.</span>
@@ -13648,10 +14650,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[68]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Spam and e&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If the index range is negative, or beyond the length of </span>
@@ -13663,10 +14681,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[69]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">menu</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">45</span><span class="p">]</span>
@@ -13676,10 +14710,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[70]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Strings have various formatting methods that&#39;re very useful for making </span>
@@ -13695,10 +14745,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result:     1.44
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Multiple formatting parameters can be passed inside brackets.</span>
@@ -13709,10 +14773,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result:     1.44 +/- 0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Python style formatting uses the &quot;format&quot; member method of strings.</span>
@@ -13724,10 +14802,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result: 1.435 +/- 0.035
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If you put indices in the curly brackets they&#39;re replaced by the </span>
@@ -13740,10 +14832,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>spam and eggs and spam
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can use C style formatting flags within the curly brackets, after </span>
@@ -13755,10 +14861,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result:     1.44 +/- 0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># And with indices.</span>
@@ -13769,10 +14889,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result:     1.44 +/- 0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Yet another alternative is using &#39;keywords&#39;. Rather than an index, </span>
@@ -13785,10 +14919,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result:     1.44 +/- 0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You don&#39;t need to format a string at initialisation. The format method </span>
@@ -13802,6 +14950,22 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Result: {:8.2f} +/- {:4.2f}
+Result:     3.24 +/- 0.22
+Result:     2.90 +/- 0.09
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13840,7 +15004,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">result</span> <span class="o">=</span> <span class="bp">None</span>
@@ -13851,10 +15015,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">result</span> <span class="o">=</span> <span class="mf">10.</span>
@@ -13862,6 +15040,22 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[80]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13890,7 +15084,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Everything can be converted to a string in some way, using str(), this </span>
@@ -13902,10 +15096,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[81]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;123&#39;, &#39;True&#39;, &#39;4.0&#39;, &#39;None&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Many things can also be converted to ints.</span>
@@ -13916,10 +15126,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[82]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1, 4, 1, 0, 1000000000000)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If the number being converted is too large to store as a regular int</span>
@@ -13931,10 +15157,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;type &#39;int&#39;&gt; &lt;type &#39;long&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Using the long constructor always returns a long int, regardless of its</span>
@@ -13946,10 +15186,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[84]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2L</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># When casting from string to int (or long) you can define the base to </span>
@@ -13963,10 +15219,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>11 9 3
+15
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Some strings can&#39;t be interpreted as ints though, and then int() raises </span>
@@ -13975,6 +15246,27 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-86-998b9cf35942&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Some strings can&#39;t be interpreted as ints though, and then int() raises</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># an exception.</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>int<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;spam&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;spam&#39;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15040,7 +16332,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># As we&#39;ve declared many things in the process of this course dir </span>
@@ -15052,10 +16344,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;In&#39;, &#39;Out&#39;, &#39;_&#39;, &#39;_14&#39;, &#39;_15&#39;, &#39;_16&#39;, &#39;_17&#39;, &#39;_18&#39;, &#39;_19&#39;, &#39;_20&#39;, &#39;_22&#39;, &#39;_23&#39;, &#39;_24&#39;, &#39;_25&#39;, &#39;_26&#39;, &#39;_27&#39;, &#39;_28&#39;, &#39;_29&#39;, &#39;_3&#39;, &#39;_30&#39;, &#39;_4&#39;, &#39;_48&#39;, &#39;_49&#39;, &#39;_50&#39;, &#39;_51&#39;, &#39;_54&#39;, &#39;_55&#39;, &#39;_56&#39;, &#39;_57&#39;, &#39;_58&#39;, &#39;_59&#39;, &#39;_60&#39;, &#39;_61&#39;, &#39;_62&#39;, &#39;_63&#39;, &#39;_64&#39;, &#39;_65&#39;, &#39;_66&#39;, &#39;_67&#39;, &#39;_68&#39;, &#39;_69&#39;, &#39;_70&#39;, &#39;_80&#39;, &#39;_81&#39;, &#39;_82&#39;, &#39;_84&#39;, &#39;__&#39;, &#39;___&#39;, &#39;__builtin__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__name__&#39;, &#39;_dh&#39;, &#39;_exit_code&#39;, &#39;_i&#39;, &#39;_i1&#39;, &#39;_i10&#39;, &#39;_i11&#39;, &#39;_i12&#39;, &#39;_i13&#39;, &#39;_i14&#39;, &#39;_i15&#39;, &#39;_i16&#39;, &#39;_i17&#39;, &#39;_i18&#39;, &#39;_i19&#39;, &#39;_i2&#39;, &#39;_i20&#39;, &#39;_i21&#39;, &#39;_i22&#39;, &#39;_i23&#39;, &#39;_i24&#39;, &#39;_i25&#39;, &#39;_i26&#39;, &#39;_i27&#39;, &#39;_i28&#39;, &#39;_i29&#39;, &#39;_i3&#39;, &#39;_i30&#39;, &#39;_i31&#39;, &#39;_i32&#39;, &#39;_i33&#39;, &#39;_i34&#39;, &#39;_i35&#39;, &#39;_i36&#39;, &#39;_i37&#39;, &#39;_i38&#39;, &#39;_i39&#39;, &#39;_i4&#39;, &#39;_i40&#39;, &#39;_i41&#39;, &#39;_i42&#39;, &#39;_i43&#39;, &#39;_i44&#39;, &#39;_i45&#39;, &#39;_i46&#39;, &#39;_i47&#39;, &#39;_i48&#39;, &#39;_i49&#39;, &#39;_i5&#39;, &#39;_i50&#39;, &#39;_i51&#39;, &#39;_i52&#39;, &#39;_i53&#39;, &#39;_i54&#39;, &#39;_i55&#39;, &#39;_i56&#39;, &#39;_i57&#39;, &#39;_i58&#39;, &#39;_i59&#39;, &#39;_i6&#39;, &#39;_i60&#39;, &#39;_i61&#39;, &#39;_i62&#39;, &#39;_i63&#39;, &#39;_i64&#39;, &#39;_i65&#39;, &#39;_i66&#39;, &#39;_i67&#39;, &#39;_i68&#39;, &#39;_i69&#39;, &#39;_i7&#39;, &#39;_i70&#39;, &#39;_i71&#39;, &#39;_i72&#39;, &#39;_i73&#39;, &#39;_i74&#39;, &#39;_i75&#39;, &#39;_i76&#39;, &#39;_i77&#39;, &#39;_i78&#39;, &#39;_i79&#39;, &#39;_i8&#39;, &#39;_i80&#39;, &#39;_i81&#39;, &#39;_i82&#39;, &#39;_i83&#39;, &#39;_i84&#39;, &#39;_i85&#39;, &#39;_i86&#39;, &#39;_i87&#39;, &#39;_i9&#39;, &#39;_ih&#39;, &#39;_ii&#39;, &#39;_iii&#39;, &#39;_oh&#39;, &#39;_sh&#39;, &#39;area&#39;, &#39;area2&#39;, &#39;exit&#39;, &#39;genericResult&#39;, &#39;get_ipython&#39;, &#39;length&#39;, &#39;lyric&#39;, &#39;menu&#39;, &#39;menu2&#39;, &#39;name&#39;, &#39;quit&#39;, &#39;result&#39;, &#39;result1&#39;, &#39;result2&#39;, &#39;width&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can see the full list of built-in functionality available by doing</span>
@@ -15066,10 +16372,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;ArithmeticError&#39;, &#39;AssertionError&#39;, &#39;AttributeError&#39;, &#39;BaseException&#39;, &#39;BufferError&#39;, &#39;BytesWarning&#39;, &#39;DeprecationWarning&#39;, &#39;EOFError&#39;, &#39;Ellipsis&#39;, &#39;EnvironmentError&#39;, &#39;Exception&#39;, &#39;False&#39;, &#39;FloatingPointError&#39;, &#39;FutureWarning&#39;, &#39;GeneratorExit&#39;, &#39;IOError&#39;, &#39;ImportError&#39;, &#39;ImportWarning&#39;, &#39;IndentationError&#39;, &#39;IndexError&#39;, &#39;KeyError&#39;, &#39;KeyboardInterrupt&#39;, &#39;LookupError&#39;, &#39;MemoryError&#39;, &#39;NameError&#39;, &#39;None&#39;, &#39;NotImplemented&#39;, &#39;NotImplementedError&#39;, &#39;OSError&#39;, &#39;OverflowError&#39;, &#39;PendingDeprecationWarning&#39;, &#39;ReferenceError&#39;, &#39;RuntimeError&#39;, &#39;RuntimeWarning&#39;, &#39;StandardError&#39;, &#39;StopIteration&#39;, &#39;SyntaxError&#39;, &#39;SyntaxWarning&#39;, &#39;SystemError&#39;, &#39;SystemExit&#39;, &#39;TabError&#39;, &#39;True&#39;, &#39;TypeError&#39;, &#39;UnboundLocalError&#39;, &#39;UnicodeDecodeError&#39;, &#39;UnicodeEncodeError&#39;, &#39;UnicodeError&#39;, &#39;UnicodeTranslateError&#39;, &#39;UnicodeWarning&#39;, &#39;UserWarning&#39;, &#39;ValueError&#39;, &#39;Warning&#39;, &#39;ZeroDivisionError&#39;, &#39;__IPYTHON__&#39;, &#39;__IPYTHON__active&#39;, &#39;__debug__&#39;, &#39;__doc__&#39;, &#39;__import__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;abs&#39;, &#39;all&#39;, &#39;any&#39;, &#39;apply&#39;, &#39;basestring&#39;, &#39;bin&#39;, &#39;bool&#39;, &#39;buffer&#39;, &#39;bytearray&#39;, &#39;bytes&#39;, &#39;callable&#39;, &#39;chr&#39;, &#39;classmethod&#39;, &#39;cmp&#39;, &#39;coerce&#39;, &#39;compile&#39;, &#39;complex&#39;, &#39;copyright&#39;, &#39;credits&#39;, &#39;delattr&#39;, &#39;dict&#39;, &#39;dir&#39;, &#39;divmod&#39;, &#39;dreload&#39;, &#39;enumerate&#39;, &#39;eval&#39;, &#39;execfile&#39;, &#39;file&#39;, &#39;filter&#39;, &#39;float&#39;, &#39;format&#39;, &#39;frozenset&#39;, &#39;get_ipython&#39;, &#39;getattr&#39;, &#39;globals&#39;, &#39;hasattr&#39;, &#39;hash&#39;, &#39;help&#39;, &#39;hex&#39;, &#39;id&#39;, &#39;input&#39;, &#39;int&#39;, &#39;intern&#39;, &#39;isinstance&#39;, &#39;issubclass&#39;, &#39;iter&#39;, &#39;len&#39;, &#39;license&#39;, &#39;list&#39;, &#39;locals&#39;, &#39;long&#39;, &#39;map&#39;, &#39;max&#39;, &#39;memoryview&#39;, &#39;min&#39;, &#39;next&#39;, &#39;object&#39;, &#39;oct&#39;, &#39;open&#39;, &#39;ord&#39;, &#39;pow&#39;, &#39;print&#39;, &#39;property&#39;, &#39;range&#39;, &#39;raw_input&#39;, &#39;reduce&#39;, &#39;reload&#39;, &#39;repr&#39;, &#39;reversed&#39;, &#39;round&#39;, &#39;set&#39;, &#39;setattr&#39;, &#39;slice&#39;, &#39;sorted&#39;, &#39;staticmethod&#39;, &#39;str&#39;, &#39;sum&#39;, &#39;super&#39;, &#39;tuple&#39;, &#39;type&#39;, &#39;unichr&#39;, &#39;unicode&#39;, &#39;vars&#39;, &#39;xrange&#39;, &#39;zip&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can call dir on a class type or an instance of a class.</span>
@@ -15077,6 +16397,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__abs__&#39;, &#39;__add__&#39;, &#39;__class__&#39;, &#39;__coerce__&#39;, &#39;__delattr__&#39;, &#39;__div__&#39;, &#39;__divmod__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__float__&#39;, &#39;__floordiv__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getnewargs__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__int__&#39;, &#39;__le__&#39;, &#39;__long__&#39;, &#39;__lt__&#39;, &#39;__mod__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__neg__&#39;, &#39;__new__&#39;, &#39;__nonzero__&#39;, &#39;__pos__&#39;, &#39;__pow__&#39;, &#39;__radd__&#39;, &#39;__rdiv__&#39;, &#39;__rdivmod__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__rfloordiv__&#39;, &#39;__rmod__&#39;, &#39;__rmul__&#39;, &#39;__rpow__&#39;, &#39;__rsub__&#39;, &#39;__rtruediv__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__sub__&#39;, &#39;__subclasshook__&#39;, &#39;__truediv__&#39;, &#39;conjugate&#39;, &#39;imag&#39;, &#39;real&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15109,7 +16443,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># These are all equivalent:</span>
@@ -15120,6 +16454,22 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+3
+3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15160,7 +16510,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># For instance, the dir method has its own built-in documentation:</span>
@@ -15171,10 +16521,39 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function dir in module __builtin__:
+
+dir(...)
+    dir([object]) -&gt; list of strings
+    
+    If called without an argument, return the names in the current scope.
+    Else, return an alphabetized list of names comprising (some of) the attributes
+    of the given object, and of attributes reachable from it.
+    If the object supplies a method named __dir__, it will be used; otherwise
+    the default dir() logic is used and returns:
+      for a module object: the module&#39;s attributes.
+      for a class object:  its attributes, and recursively the attributes
+        of its bases.
+      for any other object: its attributes, its class&#39;s attributes, and
+        recursively the attributes of its class&#39;s base classes.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Or for the conjugate method of the complex class:</span>
@@ -15185,10 +16564,30 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on method_descriptor:
+
+conjugate(...)
+    complex.conjugate() -&gt; complex
+    
+    Return the complex conjugate of its argument. (3-4j).conjugate() == 3+4j.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can also enter interactive help mode by calling help without an </span>
@@ -15198,6 +16597,40 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Welcome to Python 2.7!  This is the online help utility.
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at http://docs.python.org/2.7/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type &#34;quit&#34;.
+
+To get a list of available modules, keywords, or topics, type &#34;modules&#34;,
+&#34;keywords&#34;, or &#34;topics&#34;.  Each module also comes with a one-line summary
+of what it does; to list the modules whose summaries contain a given word
+such as &#34;spam&#34;, type &#34;modules spam&#34;.
+
+help&gt; q
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type &#34;help(object)&#34;.  Executing &#34;help(&#39;string&#39;)&#34;
+has the same effect as typing a particular string at the help&gt; prompt.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15229,7 +16662,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
@@ -15237,6 +16670,21 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15256,7 +16704,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Check if something is a numerical type:</span>
@@ -15265,6 +16713,21 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15292,7 +16755,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Evaluate a boolean expression and perform certain actions accordingly.</span>
@@ -15308,10 +16771,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Yes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If you only have a single expression to evaluate it can be on </span>
@@ -15324,10 +16801,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Yes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># An if statement can be followed by an arbitrary number of elif </span>
@@ -15348,10 +16839,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Positive
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Boolean statements can be combined using &quot;and&quot; and &quot;or&quot;:</span>
@@ -15363,6 +16868,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x is in the signal region
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15385,7 +16904,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">324</span>
@@ -15397,6 +16916,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x &lt; -100
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15419,7 +16952,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Eg, using 2 spaces.</span>
@@ -15433,6 +16966,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Positive
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15486,7 +17033,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -15506,10 +17053,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 1 2 3 4 5 6 7 8 9 
+10 False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Use the fact that a non-empty list evaluates to True</span>
@@ -15521,6 +17083,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5 4 3 2 1
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15548,7 +17124,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If only one argument is given to range the list goes</span>
@@ -15560,10 +17136,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If two are given range returns a list of integers</span>
@@ -15575,10 +17165,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A third argument gives the step size between elements.</span>
@@ -15586,6 +17190,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[-8, -6, -4, -2, 0, 2, 4, 6, 8]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15604,7 +17222,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Iterate over the list of integers returned by range:</span>
@@ -15616,10 +17234,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Iterate over characters in a string:</span>
@@ -15631,10 +17263,27 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>e
+g
+g
+s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Iterate over a tuple:</span>
@@ -15647,10 +17296,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3 a (8, 9) True None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Iterate over indices of the tuple.</span>
@@ -15659,6 +17322,26 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 1
+1 2
+2 3
+3 a
+4 (8, 9)
+5 True
+6 None
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15677,7 +17360,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
@@ -15696,6 +17379,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 8 6 4 2 -2 -4 -6 -8 -10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15727,7 +17424,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Put &quot;Hello world!&quot; into a function.</span>
@@ -15742,7 +17439,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Then call it.</span>
@@ -15753,10 +17450,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A simple function with two arguments.</span>
@@ -15772,7 +17483,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Call the function.</span>
@@ -15785,10 +17496,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>13
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A function with no return value actually returns None</span>
@@ -15797,6 +17522,21 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+None
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15815,7 +17555,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">)</span>
@@ -15824,6 +17564,21 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;type &#39;function&#39;&gt;
+True
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15842,7 +17597,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Call the variable assigned to the function just</span>
@@ -15856,6 +17611,22 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;type &#39;int&#39;&gt;
+&lt;type &#39;float&#39;&gt;
+&lt;type &#39;complex&#39;&gt;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15874,7 +17645,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
@@ -15890,7 +17661,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="p">:</span>
@@ -15898,6 +17669,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 1 2 3 5 8 13 21 34 55
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -15917,7 +17702,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Redefine the method with a doc string.</span>
@@ -15935,7 +17720,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">help</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">)</span>
@@ -15945,10 +17730,30 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function sum_of_squares in module __main__:
+
+sum_of_squares(x, y)
+    Returns the sum of squares.
+    
+    Takes two arguments.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The doc string is stored in the __doc__ attribute </span>
@@ -15957,6 +17762,22 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Returns the sum of squares.
+    
+    Takes two arguments.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16037,7 +17858,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">class</span> <span class="nc">Minimal</span> <span class="p">:</span>
@@ -16051,7 +17872,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Then make an instance of the class like so:</span>
@@ -16065,7 +17886,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Attributes can then be assigned dynamically.</span>
@@ -16078,10 +17899,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>eggs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can check if an object has an attribute with &quot;hasattr&quot;</span>
@@ -16093,10 +17928,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># &quot;getattr&quot; retrieves an attribute.</span>
@@ -16108,10 +17958,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>eggs
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Attributes can be removed using del</span>
@@ -16120,6 +17984,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16159,7 +18037,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">class</span> <span class="nc">Bird</span> <span class="p">:</span>
@@ -16202,7 +18080,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Then make an instance of Bird.</span>
@@ -16218,10 +18096,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Species: Duck
+False
+[&#39;__doc__&#39;, &#39;__init__&#39;, &#39;__module__&#39;, &#39;about_me&#39;, &#39;get_species&#39;, &#39;is_species&#39;, &#39;species&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[132]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">swallow</span> <span class="o">=</span> <span class="n">Bird</span><span class="p">(</span><span class="s">&#39;Swallow&#39;</span><span class="p">)</span>
@@ -16233,10 +18127,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Species: Swallow
+Swallow
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Again doc strings are stored in the __doc__ attribute.</span>
@@ -16247,10 +18156,42 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on class Bird in module __main__:
+
+class Bird
+ |  A class to describe bird characteristics.
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, species)
+ |      Constructor. Sets the species of this Bird.
+ |  
+ |  about_me(self)
+ |      Print info about this Bird
+ |  
+ |  get_species(self)
+ |      Get the species of this Bird
+ |  
+ |  is_species(self, species)
+ |      Check if this Bird is of the given species.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[134]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">help</span><span class="p">(</span><span class="n">Bird</span><span class="o">.</span><span class="n">is_species</span><span class="p">)</span>
@@ -16260,16 +18201,48 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on method is_species in module __main__:
+
+is_species(self, species) unbound __main__.Bird method
+    Check if this Bird is of the given species.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="n">Bird</span><span class="o">.</span><span class="n">is_species</span><span class="o">.</span><span class="n">__doc__</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Check if this Bird is of the given species.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16298,7 +18271,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[136]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The base class goes in brackets following the name</span>
@@ -16335,7 +18308,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[137]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Instantiate as before.</span>
@@ -16344,6 +18317,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__doc__&#39;, &#39;__init__&#39;, &#39;__module__&#39;, &#39;about_me&#39;, &#39;get_species&#39;, &#39;is_species&#39;, &#39;species&#39;, &#39;velocity&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16362,7 +18349,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Now call some.</span>
@@ -16374,10 +18361,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[139]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># While this uses the definition in the Swallow derived class.</span>
@@ -16385,6 +18386,21 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Species: Swallow
+Wind-speed-velocity (unladen): 3.4 m/s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16403,13 +18419,27 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[140]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="nb">dir</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__doc__&#39;, &#39;__format__&#39;, &#39;__getattribute__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16430,7 +18460,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Eg, this typo passes slilently:</span>
@@ -16445,7 +18475,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># But redefining the base class as inheriting from object and using </span>
@@ -16497,6 +18527,27 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-142-a7edc66e82ee&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     40</span> 
+<span class="ansi-green-intense-fg ansi-bold">     41</span> swallow <span class="ansi-blue-fg">=</span> Swallow<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3.43</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 42</span><span class="ansi-red-fg"> </span>swallow<span class="ansi-blue-fg">.</span>veloctiy <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">8.9</span>
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;Swallow&#39; object has no attribute &#39;veloctiy&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -16533,7 +18584,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[143]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">class</span> <span class="nc">Swallow</span><span class="p">(</span><span class="n">Bird</span><span class="p">)</span> <span class="p">:</span>
@@ -16569,7 +18620,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">swallow1</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">9.2</span><span class="p">)</span>
@@ -16581,10 +18632,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Change the value of the class attribute like so:</span>
@@ -16596,10 +18662,26 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Initialised a swallow:
+Species: Swallow
+Wind-speed-velocity (unladen): 5.4 m/s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The value of the attribute is the same for all instances </span>
@@ -16610,6 +18692,22 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+True
+True
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16710,7 +18808,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The built-in math module</span>
@@ -16722,10 +18820,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;hypot&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;modf&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;radians&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;trunc&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Call a method or access a variable contained in a module.</span>
@@ -16734,6 +18846,21 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.0
+1.22464679915e-16
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16752,7 +18879,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># import a specific function/variable from a module.</span>
@@ -16767,10 +18894,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.707106781187 0.707106781187
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># You can also rename a variable at import using the</span>
@@ -16784,10 +18925,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import everything from a module into the global</span>
@@ -16804,10 +18959,25 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.71828182846
+1.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import a sub-module from a module.</span>
@@ -16819,10 +18989,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__all__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;_joinrealpath&#39;, &#39;_unicode&#39;, &#39;_uvarprog&#39;, &#39;_varprog&#39;, &#39;abspath&#39;, &#39;altsep&#39;, &#39;basename&#39;, &#39;commonprefix&#39;, &#39;curdir&#39;, &#39;defpath&#39;, &#39;devnull&#39;, &#39;dirname&#39;, &#39;exists&#39;, &#39;expanduser&#39;, &#39;expandvars&#39;, &#39;extsep&#39;, &#39;genericpath&#39;, &#39;getatime&#39;, &#39;getctime&#39;, &#39;getmtime&#39;, &#39;getsize&#39;, &#39;isabs&#39;, &#39;isdir&#39;, &#39;isfile&#39;, &#39;islink&#39;, &#39;ismount&#39;, &#39;join&#39;, &#39;lexists&#39;, &#39;normcase&#39;, &#39;normpath&#39;, &#39;os&#39;, &#39;pardir&#39;, &#39;pathsep&#39;, &#39;realpath&#39;, &#39;relpath&#39;, &#39;samefile&#39;, &#39;sameopenfile&#39;, &#39;samestat&#39;, &#39;sep&#39;, &#39;split&#39;, &#39;splitdrive&#39;, &#39;splitext&#39;, &#39;stat&#39;, &#39;supports_unicode_filenames&#39;, &#39;sys&#39;, &#39;walk&#39;, &#39;warnings&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import a method/variable from a sub-module.</span>
@@ -16831,6 +19015,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16850,7 +19048,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[154]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># The __import__ method actually returns the module.</span>
@@ -16863,10 +19061,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;hypot&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;modf&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;radians&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;trunc&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># If you alternatively want to use the cmath module,</span>
@@ -16879,10 +19091,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atanh&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;e&#39;, &#39;exp&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;phase&#39;, &#39;pi&#39;, &#39;polar&#39;, &#39;rect&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Alternatively, using the exec keyword achieves </span>
@@ -16894,6 +19120,20 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__all__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;_joinrealpath&#39;, &#39;_unicode&#39;, &#39;_uvarprog&#39;, &#39;_varprog&#39;, &#39;abspath&#39;, &#39;altsep&#39;, &#39;basename&#39;, &#39;commonprefix&#39;, &#39;curdir&#39;, &#39;defpath&#39;, &#39;devnull&#39;, &#39;dirname&#39;, &#39;exists&#39;, &#39;expanduser&#39;, &#39;expandvars&#39;, &#39;extsep&#39;, &#39;genericpath&#39;, &#39;getatime&#39;, &#39;getctime&#39;, &#39;getmtime&#39;, &#39;getsize&#39;, &#39;isabs&#39;, &#39;isdir&#39;, &#39;isfile&#39;, &#39;islink&#39;, &#39;ismount&#39;, &#39;join&#39;, &#39;lexists&#39;, &#39;normcase&#39;, &#39;normpath&#39;, &#39;os&#39;, &#39;pardir&#39;, &#39;pathsep&#39;, &#39;realpath&#39;, &#39;relpath&#39;, &#39;samefile&#39;, &#39;sameopenfile&#39;, &#39;samestat&#39;, &#39;sep&#39;, &#39;split&#39;, &#39;splitdrive&#39;, &#39;splitext&#39;, &#39;stat&#39;, &#39;supports_unicode_filenames&#39;, &#39;sys&#39;, &#39;walk&#39;, &#39;warnings&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16927,7 +19167,7 @@ print &#39;Hello world!&#39;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
@@ -16939,10 +19179,24 @@ print &#39;Hello world!&#39;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>array(&#39;d&#39;, [0.0, 0.0, 0.0])
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Executing the same code after importing the numpy array </span>
@@ -16954,6 +19208,28 @@ print &#39;Hello world!&#39;
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-158-cb5d45af3f5f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># arguments.</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">from</span> numpy <span class="ansi-green-fg">import</span> array
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg"> </span>myArray <span class="ansi-blue-fg">=</span> array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;d&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0.</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">print</span> myArray
+
+<span class="ansi-red-fg">TypeError</span>: data type not understood</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -17943,7 +20219,7 @@ if __name__ == &#39;__main__&#39; :
 </div>python my_script.py arg1 arg2 arg3 ...
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Arguments are then stored as a list of strings</span>
@@ -17953,6 +20229,20 @@ if __name__ == &#39;__main__&#39; :
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/ipykernel/__main__.py&#39;, &#39;-f&#39;, &#39;/Users/michaelalexander/Library/Jupyter/runtime/kernel-7efc0fef-a24e-490e-8731-c3c75cf375ab.json&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -17985,7 +20275,7 @@ if __name__ == &#39;__main__&#39; :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">%%</span><span class="k">writefile</span> listdir.py
@@ -17996,6 +20286,20 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing listdir.py
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18015,13 +20319,27 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="o">!</span>python listdir.py ~/Documents/Projects
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;.DS_Store&#39;, &#39;baryon-lifetimes-run-I&#39;, &#39;baryon-lifetimes-run-I-bkup&#39;, &#39;baryon-lifetimes-run-II&#39;, &#39;Bd2pipi&#39;, &#39;Bs2KK&#39;, &#39;DLifetimes&#39;, &#39;eta&#39;, &#39;IPResolutions&#39;, &#39;measurementOfG&#39;, &#39;random&#39;, &#39;RooFit&#39;, &#39;SweetFit&#39;, &#39;TrackingAndAlignment&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18075,7 +20393,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="n">roderick</span>
@@ -18085,10 +20403,29 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-163-012eb1d4b761&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">print</span> roderick
+
+<span class="ansi-red-fg">NameError</span>: name &#39;roderick&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="nb">int</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
@@ -18098,10 +20435,29 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-164-b3c3f4515dd4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>int<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;a&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;a&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">math</span>
@@ -18112,10 +20468,30 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-165-227a3862942b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> math
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>math<span class="ansi-blue-fg">.</span>sqrt<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;a&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: a float is required</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
@@ -18125,10 +20501,29 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-166-05c9758a9c21&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">0</span>
+
+<span class="ansi-red-fg">ZeroDivisionError</span>: integer division or modulo by zero</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span>
@@ -18138,16 +20533,53 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-167-d4097d563f61&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">.5</span>
+
+<span class="ansi-red-fg">ValueError</span>: negative number cannot be raised to a fractional power</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="s">&#39;Don&#39;</span><span class="n">t</span> <span class="n">forget</span> <span class="n">to</span> <span class="n">escape</span><span class="o">!</span><span class="err">&#39;</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-168-7848b5cb0c67&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    &#39;Don&#39;t forget to escape!&#39;</span>
+         ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18168,7 +20600,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">exceptions</span>
@@ -18176,6 +20608,20 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;ArithmeticError&#39;, &#39;AssertionError&#39;, &#39;AttributeError&#39;, &#39;BaseException&#39;, &#39;BufferError&#39;, &#39;BytesWarning&#39;, &#39;DeprecationWarning&#39;, &#39;EOFError&#39;, &#39;EnvironmentError&#39;, &#39;Exception&#39;, &#39;FloatingPointError&#39;, &#39;FutureWarning&#39;, &#39;GeneratorExit&#39;, &#39;IOError&#39;, &#39;ImportError&#39;, &#39;ImportWarning&#39;, &#39;IndentationError&#39;, &#39;IndexError&#39;, &#39;KeyError&#39;, &#39;KeyboardInterrupt&#39;, &#39;LookupError&#39;, &#39;MemoryError&#39;, &#39;NameError&#39;, &#39;NotImplementedError&#39;, &#39;OSError&#39;, &#39;OverflowError&#39;, &#39;PendingDeprecationWarning&#39;, &#39;ReferenceError&#39;, &#39;RuntimeError&#39;, &#39;RuntimeWarning&#39;, &#39;StandardError&#39;, &#39;StopIteration&#39;, &#39;SyntaxError&#39;, &#39;SyntaxWarning&#39;, &#39;SystemError&#39;, &#39;SystemExit&#39;, &#39;TabError&#39;, &#39;TypeError&#39;, &#39;UnboundLocalError&#39;, &#39;UnicodeDecodeError&#39;, &#39;UnicodeEncodeError&#39;, &#39;UnicodeError&#39;, &#39;UnicodeTranslateError&#39;, &#39;UnicodeWarning&#39;, &#39;UserWarning&#39;, &#39;ValueError&#39;, &#39;Warning&#39;, &#39;ZeroDivisionError&#39;, &#39;__doc__&#39;, &#39;__name__&#39;, &#39;__package__&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18210,7 +20656,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">print_inverse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -18230,7 +20676,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="mf">6.</span><span class="p">)</span>
@@ -18240,10 +20686,24 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.166666666667
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="s">&#39;6.&#39;</span><span class="p">)</span>
@@ -18253,16 +20713,44 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>6. is a &lt;type &#39;str&#39;&gt; , not a number!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Can&#39;t divide by zero!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18281,7 +20769,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">print_inverse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -18298,13 +20786,27 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>That didn&#39;t work!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18323,7 +20825,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">print_inverse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -18343,13 +20845,39 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">print_inverse</span><span class="p">(</span><span class="s">&#39;spam&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-177-2139d72d1734&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print_inverse<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;spam&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-176-d9c53d35656f&gt;</span> in <span class="ansi-cyan-fg">print_inverse</span><span class="ansi-blue-fg">(x)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>         <span class="ansi-red-fg"># The TypeError constructor takes a string</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>         <span class="ansi-red-fg"># message that&#39;s printed when raised.</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> TypeError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;{0} is a {1}, not a number!&#39;</span>                        <span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>     <span class="ansi-green-fg">else</span> <span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>         <span class="ansi-green-fg">print</span> <span class="ansi-cyan-fg">1.</span><span class="ansi-blue-fg">/</span>x
+
+<span class="ansi-red-fg">TypeError</span>: spam is a &lt;type &#39;str&#39;&gt;, not a number!</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18400,7 +20928,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># So this:</span>
@@ -18415,7 +20943,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Becomes this:</span>
@@ -18429,7 +20957,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="n">inverse</span><span class="p">(</span><span class="mf">8.</span><span class="p">)</span>
@@ -18439,10 +20967,24 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.125
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># A lambda function with two arguments:</span>
@@ -18456,13 +20998,29 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">sum_of_squares</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[182]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>25</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -18481,7 +21039,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[183]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Declare and call a lambda method in the</span>
@@ -18490,6 +21048,22 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[183]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>25</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -18509,7 +21083,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[184]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">help</span><span class="p">(</span><span class="nb">filter</span><span class="p">)</span>
@@ -18519,10 +21093,32 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function filter in module __builtin__:
+
+filter(...)
+    filter(function or None, sequence) -&gt; list, tuple, or string
+    
+    Return those items of sequence for which function(item) is true.  If
+    function is None, return the items that are true.  If sequence is a tuple
+    or string, return the same type, else return a list.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[185]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># So we could do:</span>
@@ -18536,10 +21132,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[185]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[186]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Or, using a lambda method:</span>
@@ -18547,6 +21159,22 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[186]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -18574,7 +21202,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Map one sequence to another, element by element</span>
@@ -18586,10 +21214,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[187]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[188]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Get the sum of elements in a sequence.</span>
@@ -18600,10 +21244,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[188]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>45</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Reduce a sequence via recursive method calls.</span>
@@ -18614,10 +21274,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[189]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3628800</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># sum only works for numerical types, but reduce</span>
@@ -18630,10 +21306,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[190]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;The Life of Brian&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[191]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Alternatively you can use the str.join method:</span>
@@ -18644,10 +21336,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[191]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;The Life of Brian&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Merge two or more sequences into a list.</span>
@@ -18655,6 +21363,22 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[192]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0, 5), (1, 6), (2, 7), (3, 8), (4, 9)]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -18695,7 +21419,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[193]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">pairs</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -18707,10 +21431,28 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 5
+1 6
+2 7
+3 8
+4 9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[194]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Which is equivalent to :</span>
@@ -18720,6 +21462,24 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 5
+1 6
+2 7
+3 8
+4 9
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18738,7 +21498,7 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[195]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># For a list:</span>
@@ -18749,10 +21509,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[195]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[196]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Also for tuples:</span>
@@ -18763,10 +21539,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[196]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0, 1, 2, 0, 1, 2, 0, 1, 2, 0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[197]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># And for dictionaries, iterating over a </span>
@@ -18778,10 +21570,26 @@ print os.listdir(sys.argv[1])
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[197]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;a&#39;: 0, &#39;b&#39;: 1, &#39;c&#39;: 2, &#39;d&#39;: 3, &#39;e&#39;: 4}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[198]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># For lists this can also be put in square brackets</span>
@@ -18790,6 +21598,22 @@ print os.listdir(sys.argv[1])
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[198]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -18808,13 +21632,29 @@ print os.listdir(sys.argv[1])
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="nb">tuple</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">2</span> == 0)
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[199]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0, 2, 4, 6, 8)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
