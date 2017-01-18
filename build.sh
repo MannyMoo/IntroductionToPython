@@ -3,6 +3,7 @@
 git checkout master
 git pull origin master
 git checkout gh-pages
+sleep 1
 git merge -m "Merge master" master
 (make -q && echo "Nothing to build.") \
     || ((make > stdout-make 2> stderr-make \
