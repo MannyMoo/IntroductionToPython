@@ -1,0 +1,13 @@
+#!/bin/bash
+
+git checkout gh-pages
+# Need sleep between checkout & merge else the .html files and
+# updated .ipynb files have the same modification timestamp, and
+# make doesn't work. 
+sleep 1
+git merge -m "Merge master" master
+(make -q && echo "Nothing to build.") \
+    || ((make > stdout-make 2> stderr-make \
+		&& git commit -a -m "Build.") || \
+	    (echo 'make failed, stderr:' && cat stderr-make))
+git checkout master
