@@ -2,7 +2,8 @@
 .ipynb_checkpoints
 stdout-make
 stderr-make
-hello_world.log
-hello_world.py
-listdir.py
-
+*.log
+*.py
+*.pyc
+*.txt
+*.pkl
