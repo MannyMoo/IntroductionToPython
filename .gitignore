@@ -3,7 +3,11 @@
 stdout-make
 stderr-make
 *.log
-*.py
+Birds.py
+hello_world.py
+listdir.py
+pi_value.py
+Ornothology
 *.pyc
 *.txt
 *.pkl
