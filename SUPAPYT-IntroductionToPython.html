@@ -12087,7 +12087,7 @@ div#notebook {
 <ul>
 <li>Two versions of python exist: v2.x and v3.x.</li>
 <li>Python v2.x is stable, no more major releases are planned, only bugfixes.</li>
-<li>The latest major release was v2.7 in 2010, there are still a few bugfix releases per year with the latest, v2.7.13, in Dec. 2016.</li>
+<li>The latest major release was v2.7 in 2010, there are still a few bugfix releases per year with the latest, v2.7.14, in Sept. 2017.</li>
 <li>There are some <a href="http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html#why-is-python-3-considered-a-better-language-to-teach-beginning-programmers">good arguments</a> as to why v3.x might be better to teach, but as v2.x is still most widely distributed and used this course covers v2.x. Most content applies to both v2.x and v3.x.</li>
 <li>v3.x has various improvements and additional features, and is still being developed.</li>
 <li>It's the future of python, but is not fully backwards compatible.</li>
@@ -12715,7 +12715,7 @@ PYTHONHASHSEED: if this variable is set to &#39;random&#39;, the effect is the s
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> hello_world.py
-#!/bin/env python
+#!/usr/bin/env python
 print &#39;Hello world!&#39;
 </pre></div>
 
@@ -12742,28 +12742,6 @@ print &#39;Hello world!&#39;
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>On OSX you might need to use:</li>
-</ul>
-
-</div>
-</div>
-</div>#!/usr/bin/env python
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Though you can always put a link in <code>/bin</code> to make it compatible with other linux distros by doing:</li>
-</ul>
-
-</div>
-</div>
-</div>sudo ln -s /usr/bin/env /bin/env
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12821,7 +12799,7 @@ print &#39;Hello world!&#39;
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/bin/sh: ./hello_world.py: /bin/env: bad interpreter: No such file or directory
+<pre>Hello world!
 </pre>
 </div>
 </div>
@@ -12993,8 +12971,9 @@ print &#39;Hello world!&#39;
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Integer (int) division returns the floor (hashes precede a  </span>
-<span class="c1"># comment - text that&#39;s ignored by the interpreter)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Integer (int) division returns the floor </span>
+<span class="c1"># (hashes precede a comment - text that&#39;s </span>
+<span class="c1"># ignored by the interpreter)</span>
 <span class="mi">3</span><span class="o">/</span><span class="mi">2</span>
 </pre></div>
 
@@ -13298,8 +13277,9 @@ print &#39;Hello world!&#39;
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># At the interactive prompt the last value that was output is assigned to </span>
-<span class="c1"># the variable &quot;_&quot;, which can be useful for repeated calculations. </span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># At the interactive prompt the last value that was </span>
+<span class="c1"># output is assigned to the variable &quot;_&quot;, which can </span>
+<span class="c1"># be useful for repeated calculations. </span>
 <span class="n">_</span>
 </pre></div>
 
@@ -21374,7 +21354,7 @@ Birds.pyc      OtherBirds.pyc __init__.pyc
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;open file &#39;movie_titles.txt&#39;, mode &#39;w&#39; at 0x1055b5ae0&gt; &lt;type &#39;file&#39;&gt;
+<pre>&lt;open file &#39;movie_titles.txt&#39;, mode &#39;w&#39; at 0x103145a50&gt; &lt;type &#39;file&#39;&gt;
 </pre>
 </div>
 </div>
@@ -22329,7 +22309,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;/usr/local/Cellar/ipython@5/5.5.0_1/libexec/vendor/lib/python2.7/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmp4KpUEJ.json&#39;]
+<pre>[&#39;/usr/local/Cellar/ipython@5/5.5.0_1/libexec/vendor/lib/python2.7/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpfho9bc.json&#39;]
 </pre>
 </div>
 </div>
