@@ -1,5 +1,5 @@
 
-all : index.html SUPAPYT-IntroductionToPython.html SUPAPYT-LabProblems.html SUPAPYT-LabProblems-Completed.html
+all : index.html SUPAPYT-IntroductionToPython.html SUPAPYT-LabProblems.html SUPAPYT-LabProblems-Completed.html SUPAPYT-Installation-Instructions.html
 
 SUPAPYT-IntroductionToPython.html : SUPAPYT-IntroductionToPython.ipynb
 	@sed -i '' 's/"help()"/"#help()"/' $<
