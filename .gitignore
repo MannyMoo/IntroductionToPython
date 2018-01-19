@@ -8,6 +8,7 @@ hello_world.py
 listdir.py
 pi_value.py
 Ornothology
+dotproduct.py
 *.pyc
 *.txt
 *.pkl
