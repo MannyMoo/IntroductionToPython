@@ -12235,7 +12235,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Python 2.7.10
+<pre>Python 2.7.14
 </pre>
 </div>
 </div>
@@ -12636,8 +12636,10 @@ print &quot;Hello world!&quot;
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+<pre>usage: /usr/local/Cellar/python/2.7.14_2/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python [option] ... [-c cmd | -m mod | file | -] [arg] ...
 Options and arguments (and corresponding environment variables):
+-b     : issue warnings about comparing bytearray with unicode
+         (-bb: issue errors)
 -B     : don&#39;t write .py[co] files on import; also PYTHONDONTWRITEBYTECODE=x
 -c cmd : program passed in as string (terminates option list)
 -d     : debug output from parser; also PYTHONDEBUG=x
@@ -15562,8 +15564,8 @@ Result:     2.90 +/- 0.09
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+
+<span class="ansi-red-fg">ValueError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-87-911848ec2694&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Some strings can&#39;t be interpreted as ints though, and then int() raises</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># an exception.</span>
@@ -15649,8 +15651,8 @@ Result:     2.90 +/- 0.09
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+
+<span class="ansi-red-fg">ValueError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-89-e6327fe426c8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># And fails under similar conditions.</span>
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>float<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;eggs&#39;</span><span class="ansi-blue-fg">)</span>
@@ -15992,8 +15994,8 @@ Result:     2.90 +/- 0.09
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-96-c4a8caea9bb7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     11</span> L<span class="ansi-blue-fg">.</span>extend<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;spam&#39;</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-green-fg">print</span> L
@@ -16173,8 +16175,8 @@ Result:     2.90 +/- 0.09
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-101-237c648b4609&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># change an element. If you try you get an exception.</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> name <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Sir Lancelot&#39;</span>
@@ -16590,8 +16592,8 @@ False
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-112-40c505a69cfb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Though, as with strings, if you try to change an element</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># you get an exception</span>
@@ -17047,8 +17049,8 @@ False
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+
+<span class="ansi-red-fg">KeyError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-124-aa68e1d07968&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># As you might expect, if you try to access a key that doesn&#39;t</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># exist you get an exception.</span>
@@ -17360,8 +17362,8 @@ False
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-133-61e6aba2abc8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Unlike a list or tuple, you can&#39;t access elements by index</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> s <span class="ansi-blue-fg">=</span> set<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;spam and eggs&#39;</span><span class="ansi-blue-fg">)</span>
@@ -19830,7 +19832,7 @@ Wind-speed-velocity (unladen): 3.4 m/s
 <div class="prompt input_prompt">In&nbsp;[192]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Eg, this typo passes slilently:</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Eg, this typo passes silently:</span>
 
 <span class="n">swallow</span><span class="o">.</span><span class="n">veloctiy</span> <span class="o">=</span> <span class="mf">8.9</span>
 </pre></div>
@@ -19905,8 +19907,8 @@ Wind-speed-velocity (unladen): 3.4 m/s
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+
+<span class="ansi-red-fg">AttributeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-193-1b0ad4ee3fe5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     40</span> 
 <span class="ansi-green-intense-fg ansi-bold">     41</span> swallow <span class="ansi-blue-fg">=</span> Swallow<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3.43</span><span class="ansi-blue-fg">)</span>
@@ -20636,8 +20638,8 @@ True
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ImportError</span>                               Traceback (most recent call last)
+
+<span class="ansi-red-fg">ImportError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-209-1664ece9129c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># class crashes, as the constructors take different</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># arguments.</span>
@@ -20899,8 +20901,8 @@ A set of classes to describe different species of bird.
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ImportError</span>                               Traceback (most recent call last)
+
+<span class="ansi-red-fg">ImportError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-214-d8012c1d0ff6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># This doesn&#39;t currently work.</span>
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> OtherBirds
@@ -21352,7 +21354,7 @@ Birds.pyc      OtherBirds.pyc __init__.pyc
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;open file &#39;movie_titles.txt&#39;, mode &#39;w&#39; at 0x1076a79c0&gt; &lt;type &#39;file&#39;&gt;
+<pre>&lt;open file &#39;movie_titles.txt&#39;, mode &#39;w&#39; at 0x10ade5a50&gt; &lt;type &#39;file&#39;&gt;
 </pre>
 </div>
 </div>
@@ -22307,7 +22309,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;/usr/local/Cellar/ipython@5/5.5.0_1/libexec/vendor/lib/python2.7/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpNLYagK.json&#39;]
+<pre>[&#39;/usr/local/Cellar/ipython@5/5.5.0_1/libexec/vendor/lib/python2.7/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmp8F5wK6.json&#39;]
 </pre>
 </div>
 </div>
@@ -22392,7 +22394,7 @@ print os.listdir(sys.argv[1])
 <div class="prompt input_prompt">In&nbsp;[249]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">!</span>python listdir.py ~/Documents/Projects
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">!</span>python listdir.py ~/cernbox
 </pre></div>
 
 </div>
@@ -22409,10 +22411,7 @@ print os.listdir(sys.argv[1])
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Traceback (most recent call last):
-  File &#34;listdir.py&#34;, line 4, in &lt;module&gt;
-    print os.listdir(sys.argv[1])
-OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Documents/Projects&#39;
+<pre>[&#39;._sync_fe4d1d92c5ed.db&#39;, &#39;._sync_fe4d1d92c5ed.db-shm&#39;, &#39;._sync_fe4d1d92c5ed.db-wal&#39;, &#39;.owncloudsync.log&#39;, &#39;.owncloudsync.log.1&#39;, &#39;admin&#39;, &#39;keys&#39;, &#39;photos&#39;, &#39;presentations&#39;, &#39;projects&#39;, &#39;stripping&#39;, &#39;teaching&#39;, &#39;travel&#39;]
 </pre>
 </div>
 </div>
@@ -22487,8 +22486,8 @@ OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Docum
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-250-b63d1eb8983d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">print</span> roderick
 
@@ -22523,8 +22522,8 @@ OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Docum
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+
+<span class="ansi-red-fg">ValueError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-251-233884bacd4e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>int<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;a&#39;</span><span class="ansi-blue-fg">)</span>
 
@@ -22560,8 +22559,8 @@ OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Docum
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-252-6f7c8e13f9a5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> math
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>math<span class="ansi-blue-fg">.</span>sqrt<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;a&#39;</span><span class="ansi-blue-fg">)</span>
@@ -22597,8 +22596,8 @@ OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Docum
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+
+<span class="ansi-red-fg">ZeroDivisionError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-253-9e1622b385b6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">0</span>
 
@@ -22633,8 +22632,8 @@ OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Docum
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+
+<span class="ansi-red-fg">ValueError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-254-c79b4bc42973&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">.5</span>
 
@@ -22978,8 +22977,8 @@ OSError: [Errno 2] No such file or directory: &#39;/Users/michaelalexander/Docum
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-264-783e65b9001e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print_inverse<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;spam&#39;</span><span class="ansi-blue-fg">)</span>
 
