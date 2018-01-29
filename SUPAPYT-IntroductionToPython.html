@@ -12117,7 +12117,19 @@ div#notebook {
 <li>The standard command prompt on Windows isn't very good, so you may wish to consider alternatives like <a href="https://conemu.github.io/">ConEmu</a>, or <a href="https://github.com/cbucher/console">ConsoleZ</a>, or if you want a linux style environment there's <a href="http://www.cygwin.com/">Cygwin</a>.</li>
 </ul>
 </li>
-<li>For ipython, see <a href="http://jupyter.readthedocs.io/en/latest/install.html">here</a>.</li>
+<li>A basic python installation will suit most use cases.</li>
+<li>However, ipython and jupyter add a lot of useful interactive functionality on top of basic python (such as the notebook format used for these lectures). See <a href="https://mannymoo.github.io/IntroductionToPython/SUPAPYT-Installation-Instructions.html">here</a> for installation instructions.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We'll be working with python through the command line. If you're unfamiliar with using the command line see <a href="https://tutorial.djangogirls.org/en/intro_to_command_line/">here</a> for a brief introduction.</li>
 </ul>
 
 </div>
@@ -20639,15 +20651,14 @@ True
 <div class="output_subarea output_text output_error">
 <pre>
 
-<span class="ansi-red-fg">ImportError</span>Traceback (most recent call last)
+<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-209-1664ece9129c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># class crashes, as the constructors take different</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># arguments.</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> numpy <span class="ansi-green-fg">import</span> array
-<span class="ansi-green-intense-fg ansi-bold">      5</span> myArray <span class="ansi-blue-fg">=</span> array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;d&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0.</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">from</span> numpy <span class="ansi-green-fg">import</span> array
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg"> </span>myArray <span class="ansi-blue-fg">=</span> array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;d&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0.</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">*</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">print</span> myArray
 
-<span class="ansi-red-fg">ImportError</span>: No module named numpy</pre>
+<span class="ansi-red-fg">TypeError</span>: data type not understood</pre>
 </div>
 </div>
 
@@ -21354,7 +21365,7 @@ Birds.pyc      OtherBirds.pyc __init__.pyc
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;open file &#39;movie_titles.txt&#39;, mode &#39;w&#39; at 0x10ade5a50&gt; &lt;type &#39;file&#39;&gt;
+<pre>&lt;open file &#39;movie_titles.txt&#39;, mode &#39;w&#39; at 0x1021e05d0&gt; &lt;type &#39;file&#39;&gt;
 </pre>
 </div>
 </div>
@@ -22309,7 +22320,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;/usr/local/Cellar/ipython@5/5.5.0_1/libexec/vendor/lib/python2.7/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmp8F5wK6.json&#39;]
+<pre>[&#39;/usr/local/Cellar/ipython@5/5.5.0_1/libexec/vendor/lib/python2.7/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmppntOJy.json&#39;]
 </pre>
 </div>
 </div>
