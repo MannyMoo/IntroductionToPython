@@ -73,7 +73,7 @@ def class_factory(readonly, attr1, *attrs) :
 
             for name, attr in attrs.items() :
                 print name, attr
-                setattr(self, Entry._attrs[attr], tryfloat(attr))
+                setattr(self, Entry._attrs[name], tryfloat(attr))
 
         @staticmethod
         def attributes() :
