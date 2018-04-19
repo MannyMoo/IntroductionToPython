@@ -174,7 +174,8 @@ def main() :
     from argparse import ArgumentParser
 
     argparser = ArgumentParser()
-    argparser.add_argument('fname', default = 'oecd-gdp-pc-change-1997-2017.csv',
+    argparser.add_argument('fname', nargs = '?',
+                           default = 'oecd-gdp-pc-change-1997-2017.csv',
                            help = 'Name of the file from which to read the database\
  (default: oecd-gdp-pc-change-1997-2017.csv).')
     argparser.add_argument('problems', nargs = '*', type = int,
