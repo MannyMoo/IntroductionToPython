@@ -1,0 +1,5 @@
+- Spell everything out explicitly.
+- Explain things more clearly.
+- Make the problems easier and more interesting.
+- Overestimated how much we could get done.
+- Maximum 2hrs per session.
