@@ -12456,7 +12456,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4486010184 True
+<pre>4379065160 True
 </pre>
 </div>
 </div>
@@ -14405,6 +14405,8 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 
 <span class="kn">import</span> <span class="nn">random</span>
 
+<span class="c1"># Ensures it always generatesd</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
 <span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">ThreeVector</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">2000</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)])</span>
@@ -14438,50 +14440,50 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(200, -557, 879) (15822, 12306, 4198)
+<pre>(932, -118, -985) (-19700, -20685, -16162)
 0
-(200, -557, 879) (-12306, -21096, -10568)
+(932, -118, -985) (-3940, -7880, -2784)
 0
-(200, -557, 879) (-2637, 10548, 7284)
+(932, -118, -985) (19700, -12805, 20174)
 0
-(932, -995, 429) (-2574, -6864, -10328)
+(-526, -938, 577) (-4039, 3462, 1946)
 0
-(932, -995, 429) (-6864, -9438, -6978)
+(-526, -938, 577) (2885, -9809, -13316)
 0
-(932, -995, 429) (-10296, 2145, 27343)
+(-526, -938, 577) (-8655, -10963, -25712)
 0
-(464, -424, -620) (13020, -9300, 16104)
+(-970, -26, 929) (-19509, 1858, -20318)
 0
-(464, -424, -620) (3720, -6820, 7448)
+(-970, -26, 929) (-929, 4645, -840)
 0
-(464, -424, -620) (-5580, -9300, 2184)
+(-970, -26, 929) (-18580, 2787, -19322)
 0
 ordered
-(200, -557, 879)
-(15822, 12306, 4198)
-(-12306, -21096, -10568)
-(-2637, 10548, 7284)
-(932, -995, 429)
-(-2574, -6864, -10328)
-(-6864, -9438, -6978)
-(-10296, 2145, 27343)
-(464, -424, -620)
-(13020, -9300, 16104)
-(3720, -6820, 7448)
-(-5580, -9300, 2184)
+(932, -118, -985)
+(-19700, -20685, -16162)
+(-3940, -7880, -2784)
+(19700, -12805, 20174)
+(-526, -938, 577)
+(-4039, 3462, 1946)
+(2885, -9809, -13316)
+(-8655, -10963, -25712)
+(-970, -26, 929)
+(-19509, 1858, -20318)
+(-929, 4645, -840)
+(-18580, 2787, -19322)
 shuffled
-13020 -9300 16104
-  200  -557   879
-15822 12306  4198
-  464  -424  -620
--5580 -9300  2184
--2637 10548  7284
--12306 -21096 -10568
- 3720 -6820  7448
--2574 -6864 -10328
--6864 -9438 -6978
--10296  2145 27343
-  932  -995   429
+19700 -12805 20174
+  932  -118  -985
+ -929  4645  -840
+-19509  1858 -20318
+-4039  3462  1946
+-3940 -7880 -2784
+ 2885 -9809 -13316
+-8655 -10963 -25712
+-18580  2787 -19322
+-19700 -20685 -16162
+ -970   -26   929
+ -526  -938   577
 </pre>
 </div>
 </div>
