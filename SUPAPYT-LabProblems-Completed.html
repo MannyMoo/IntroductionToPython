@@ -12016,6 +12016,7 @@ div#notebook {
 </li>
 <li>Verify that (6, 8) is a Pythagorean triple.</li>
 <li>Check (32, 46), (161, 240), and (372, 496).</li>
+<li>Note that you want to check if the <strong>value</strong> of the hypotenuse is an integer, not if it's of type <code>int</code> (since a <code>float</code> can have an integer value).</li>
 </ul>
 
 </div>
@@ -12455,7 +12456,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4487503688 True
+<pre>4486010184 True
 </pre>
 </div>
 </div>
@@ -14005,100 +14006,6 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Generate some (pseudo-) random orthogonal vectors.</span>
-
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="n">ThreeVector</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">2000</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)])</span>
-    <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">vo</span> <span class="o">=</span> <span class="n">orthogonal_vector</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">50</span> <span class="o">-</span> <span class="mi">25</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
-        <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vo</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ordered&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shuffled&#39;</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;vectors.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fvec</span> <span class="p">:</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span> <span class="p">:</span>
-        <span class="n">valstr</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:5d}</span><span class="s1"> </span><span class="si">{1:5d}</span><span class="s1"> </span><span class="si">{2:5d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">valstr</span><span class="p">)</span>
-        <span class="n">fvec</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">valstr</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(-815, 609, 595) (-8925, -3570, -8571)
-0
-(-815, 609, 595) (13090, 2975, 14885)
-0
-(-815, 609, 595) (1785, 11305, -9126)
-0
-(314, 235, 667) (10672, 7337, -7609)
-0
-(314, 235, 667) (11339, 1334, -5808)
-0
-(314, 235, 667) (8671, 3335, -5257)
-0
-(516, -878, -243) (5589, -2916, 22404)
-0
-(516, -878, -243) (5832, -5589, 32578)
-0
-(516, -878, -243) (729, -2430, 10328)
-0
-ordered
-(-815, 609, 595)
-(-8925, -3570, -8571)
-(13090, 2975, 14885)
-(1785, 11305, -9126)
-(314, 235, 667)
-(10672, 7337, -7609)
-(11339, 1334, -5808)
-(8671, 3335, -5257)
-(516, -878, -243)
-(5589, -2916, 22404)
-(5832, -5589, 32578)
-(729, -2430, 10328)
-shuffled
-  314   235   667
-13090  2975 14885
- 5589 -2916 22404
- 8671  3335 -5257
-11339  1334 -5808
- 5832 -5589 32578
-10672  7337 -7609
- 1785 11305 -9126
- -815   609   595
-  516  -878  -243
-  729 -2430 10328
--8925 -3570 -8571
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14121,7 +14028,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">date</span>
@@ -14155,7 +14062,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We see it&#39;s got a __sub__ method, so</span>
@@ -14193,7 +14100,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So we get a timedelta object, which has</span>
@@ -14227,7 +14134,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Just to check it handles leap-years OK:</span>
@@ -14244,7 +14151,7 @@ shuffled
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[55]:</div>
+<div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -14261,7 +14168,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So the quickets way of getting your age in </span>
@@ -14295,7 +14202,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then to get the date on which you are/were 10000</span>
@@ -14358,7 +14265,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
@@ -14374,7 +14281,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;TenKDate.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fdate</span> <span class="p">:</span>
@@ -14392,7 +14299,7 @@ shuffled
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -14420,8 +14327,8 @@ shuffled
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Take <a href="">this file</a>, which has three integers per line, and read each set of three into an instance of your 3-vector class defined in Q. 13, and add these to a list.</li>
-<li>Check each 3-vector in the list against every other 3-vector in the list to see if they're orthogonal, and count how many pairs of vectors are orthogonal.</li>
+<li>Take <a href="https://raw.githubusercontent.com/MannyMoo/IntroductionToPython/master/vectors.txt">this file</a>, which has three integers per line, read each set of three into an instance of your 3-vector class defined in Q. 13, and add these to a list.</li>
+<li>Check each 3-vector in the list against every other 3-vector in the list to see if they're orthogonal, and count how many (unique) pairs of vectors are orthogonal.</li>
 </ul>
 
 </div>
@@ -14429,7 +14336,7 @@ shuffled
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vectors</span> <span class="o">=</span> <span class="p">[]</span>
@@ -14462,74 +14369,119 @@ shuffled
 <div class="prompt"></div>
 
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-59-339ad186ebd5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;vectors.txt&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> fvec <span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">for</span> line <span class="ansi-green-fg">in</span> fvec <span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">         </span>vec <span class="ansi-blue-fg">=</span> ThreeVector<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">[</span>int<span class="ansi-blue-fg">(</span>val<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> val <span class="ansi-green-fg">in</span> line<span class="ansi-blue-fg">.</span>split<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>         vectors<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>vec<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+
+<span class="ansi-green-fg">&lt;ipython-input-59-339ad186ebd5&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;vectors.txt&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> fvec <span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">for</span> line <span class="ansi-green-fg">in</span> fvec <span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">         </span>vec <span class="ansi-blue-fg">=</span> ThreeVector<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">[</span>int<span class="ansi-blue-fg">(</span>val<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> val <span class="ansi-green-fg">in</span> line<span class="ansi-blue-fg">.</span>split<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>         vectors<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>vec<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This is how to generate the file with some (pseudo-) random vectors,</span>
+<span class="c1"># some of which are orthogonal.</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">ThreeVector</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">2000</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)])</span>
+    <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">vo</span> <span class="o">=</span> <span class="n">orthogonal_vector</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">50</span> <span class="o">-</span> <span class="mi">25</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
+        <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ordered&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shuffled&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;vectors.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fvec</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span> <span class="p">:</span>
+        <span class="n">valstr</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:5d}</span><span class="s1"> </span><span class="si">{1:5d}</span><span class="s1"> </span><span class="si">{2:5d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">v</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">valstr</span><span class="p">)</span>
+        <span class="n">fvec</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">valstr</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>v1: (314, 235, 667)          , v2: (13090, 2975, 14885)     , orthogonal? False
-v1: (314, 235, 667)          , v2: (5589, -2916, 22404)     , orthogonal? False
-v1: (314, 235, 667)          , v2: (8671, 3335, -5257)      , orthogonal? True
-v1: (314, 235, 667)          , v2: (11339, 1334, -5808)     , orthogonal? True
-v1: (314, 235, 667)          , v2: (5832, -5589, 32578)     , orthogonal? False
-v1: (314, 235, 667)          , v2: (10672, 7337, -7609)     , orthogonal? True
-v1: (314, 235, 667)          , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (314, 235, 667)          , v2: (-815, 609, 595)         , orthogonal? False
-v1: (314, 235, 667)          , v2: (516, -878, -243)        , orthogonal? False
-v1: (314, 235, 667)          , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (314, 235, 667)          , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (5589, -2916, 22404)     , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (8671, 3335, -5257)      , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (11339, 1334, -5808)     , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (5832, -5589, 32578)     , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (10672, 7337, -7609)     , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (-815, 609, 595)         , orthogonal? True
-v1: (13090, 2975, 14885)     , v2: (516, -878, -243)        , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (13090, 2975, 14885)     , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (8671, 3335, -5257)      , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (11339, 1334, -5808)     , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (5832, -5589, 32578)     , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (10672, 7337, -7609)     , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (-815, 609, 595)         , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (516, -878, -243)        , orthogonal? True
-v1: (5589, -2916, 22404)     , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (5589, -2916, 22404)     , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (11339, 1334, -5808)     , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (5832, -5589, 32578)     , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (10672, 7337, -7609)     , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (-815, 609, 595)         , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (516, -878, -243)        , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (8671, 3335, -5257)      , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (5832, -5589, 32578)     , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (10672, 7337, -7609)     , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (-815, 609, 595)         , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (516, -878, -243)        , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (11339, 1334, -5808)     , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (5832, -5589, 32578)     , v2: (10672, 7337, -7609)     , orthogonal? False
-v1: (5832, -5589, 32578)     , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (5832, -5589, 32578)     , v2: (-815, 609, 595)         , orthogonal? False
-v1: (5832, -5589, 32578)     , v2: (516, -878, -243)        , orthogonal? True
-v1: (5832, -5589, 32578)     , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (5832, -5589, 32578)     , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (10672, 7337, -7609)     , v2: (1785, 11305, -9126)     , orthogonal? False
-v1: (10672, 7337, -7609)     , v2: (-815, 609, 595)         , orthogonal? False
-v1: (10672, 7337, -7609)     , v2: (516, -878, -243)        , orthogonal? False
-v1: (10672, 7337, -7609)     , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (10672, 7337, -7609)     , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (1785, 11305, -9126)     , v2: (-815, 609, 595)         , orthogonal? True
-v1: (1785, 11305, -9126)     , v2: (516, -878, -243)        , orthogonal? False
-v1: (1785, 11305, -9126)     , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (1785, 11305, -9126)     , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (-815, 609, 595)         , v2: (516, -878, -243)        , orthogonal? False
-v1: (-815, 609, 595)         , v2: (729, -2430, 10328)      , orthogonal? False
-v1: (-815, 609, 595)         , v2: (-8925, -3570, -8571)    , orthogonal? True
-v1: (516, -878, -243)        , v2: (729, -2430, 10328)      , orthogonal? True
-v1: (516, -878, -243)        , v2: (-8925, -3570, -8571)    , orthogonal? False
-v1: (729, -2430, 10328)      , v2: (-8925, -3570, -8571)    , orthogonal? False
-N. orthogonal: 9 / 66
+<pre>(200, -557, 879) (15822, 12306, 4198)
+0
+(200, -557, 879) (-12306, -21096, -10568)
+0
+(200, -557, 879) (-2637, 10548, 7284)
+0
+(932, -995, 429) (-2574, -6864, -10328)
+0
+(932, -995, 429) (-6864, -9438, -6978)
+0
+(932, -995, 429) (-10296, 2145, 27343)
+0
+(464, -424, -620) (13020, -9300, 16104)
+0
+(464, -424, -620) (3720, -6820, 7448)
+0
+(464, -424, -620) (-5580, -9300, 2184)
+0
+ordered
+(200, -557, 879)
+(15822, 12306, 4198)
+(-12306, -21096, -10568)
+(-2637, 10548, 7284)
+(932, -995, 429)
+(-2574, -6864, -10328)
+(-6864, -9438, -6978)
+(-10296, 2145, 27343)
+(464, -424, -620)
+(13020, -9300, 16104)
+(3720, -6820, 7448)
+(-5580, -9300, 2184)
+shuffled
+13020 -9300 16104
+  200  -557   879
+15822 12306  4198
+  464  -424  -620
+-5580 -9300  2184
+-2637 10548  7284
+-12306 -21096 -10568
+ 3720 -6820  7448
+-2574 -6864 -10328
+-6864 -9438 -6978
+-10296  2145 27343
+  932  -995   429
 </pre>
 </div>
 </div>
@@ -14537,6 +14489,14 @@ N. orthogonal: 9 / 66
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="17)">17)<a class="anchor-link" href="#17)">&#182;</a></h2>
+</div>
+</div>
 </div>
     </div>
   </div>

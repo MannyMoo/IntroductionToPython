@@ -11827,6 +11827,7 @@ div#notebook {
 <li>Try writing a simple script and passing it to the interpreter via the commandline (<a href="http://localhost:8888/notebooks/SUPAPYT-IntroductionToPython.ipynb#Python-Scripts">see here</a>).</li>
 <li>This can be as simple as the "Hello world!" example in the lectures.</li>
 <li>You can do the rest of the exercises at the commandline using a combination of the interactive interpreter and scripts, or using the Jupyter notebook format (if you have Jupyter installed). It's up to you which to use, so long as you know how to do both (or at least the use of the commandline).</li>
+<li>The main point is: there are several different ways of interacting with the python interpreter, but it's the same interpreter working in the background. Different use cases benefit from different means of interaction. </li>
 </ul>
 
 </div>
@@ -11851,43 +11852,6 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Either prefix with 0b:</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mb">0b101010</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-<span class="c1"># or convert from a string with base 2.</span>
-<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;101010&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>42
-42
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11898,43 +11862,6 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Similarly, prefix with 0x</span>
-<span class="n">num</span> <span class="o">=</span> <span class="mh">0x2a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-<span class="c1"># or convert from a string with base 16.</span>
-<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;2a&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>42
-42
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -11955,40 +11882,6 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hypotenuse</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">len1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">len2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">hypotenuse</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12014,49 +11907,11 @@ div#notebook {
 </li>
 <li>Verify that (6, 8) is a Pythagorean triple.</li>
 <li>Check (32, 46), (161, 240), and (372, 496).</li>
+<li>Note that you want to check if the <strong>value</strong> of the hypotenuse is an integer, not if it's of type <code>int</code> (since a <code>float</code> can have an integer value).</li>
 </ul>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_triple</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">len1</span><span class="p">)</span> <span class="o">!=</span> <span class="n">len1</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">len2</span><span class="p">)</span> <span class="o">!=</span> <span class="n">len2</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="n">hyp</span> <span class="o">=</span> <span class="p">(</span><span class="n">len1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">len2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span>
-    <span class="k">return</span> <span class="n">hyp</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">hyp</span><span class="p">)</span>
-
-<span class="n">test_triple</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12177,10 +12032,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
@@ -12260,10 +12117,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arguments</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="k">def</span> <span class="nf">arguments</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;args =&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
 </pre></div>
 
@@ -12297,10 +12156,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">named_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="k">def</span> <span class="nf">named_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;kwargs =&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
 
@@ -12320,12 +12181,152 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="n">named_args</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>kwargs = {}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="n">named_args</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>kwargs = {&#39;a&#39;: 1, &#39;b&#39;: 2}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="n">named_args</span><span class="p">(</span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">),</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">3.5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>kwargs = {&#39;t&#39;: (&#39;a&#39;, &#39;b&#39;, &#39;c&#39;), &#39;l&#39;: [1, 2, 3], &#39;f&#39;: 3.5}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="n">named_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-1bd9654542c5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg">#_</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>named_args<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> n <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: named_args() takes 0 positional arguments but 1 was given</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>What type is <code>kwargs</code> within the method?</li>
+<li>The last call fails as the method only expects named arguments.</li>
 </ul>
 
 </div>
@@ -12347,7 +12348,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">args_and_keywords</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#_</span>
+
+<span class="k">def</span> <span class="nf">args_and_keywords</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;args =&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;kwargs =&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
@@ -12365,6 +12368,98 @@ div#notebook {
 <li>Give it a try and see what ways you can pass it arguments.</li>
 </ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="13)">13)<a class="anchor-link" href="#13)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Write a class to represent a 3 component vector with x, y &amp; z attributes.</li>
+<li>Write the <code>__init__</code> member function to take values for x, y &amp; z, with their default values being zero.</li>
+<li>Write a member function to return the dot product of the vector with another 3-vector, which is passed as an argument.</li>
+<li>Write a <code>__add__</code> member function that returns a new 3-vector that's the sum of the vector with another given as an argument, so you can use the <code>+</code> operator on instances of your class.</li>
+<li>Write a member function to check if the vector is orthogonal to another 3-vector, ie, their dot product is zero.</li>
+<li>Use instances of your class to verify that the vectors (4, -7, 9) and (54, -18, -38) are orthogonal.</li>
+<li>Do the same for (890, 3254, 6404) + (542, -912, 834) and (1227, -484, -97) + (-8465, 7722, -813), making use of the <code>+</code> operator on instances of your class.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="14)">14)<a class="anchor-link" href="#14)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the <code>date</code> class from the <code>datetime</code> module to work out how old you are in days.</li>
+<li>On what date will you be/were you 10000 days old?</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="15)">15)<a class="anchor-link" href="#15)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use <code>pickle</code> to save the date on which you're 10000 days old to a file, then load it again and verify that it's the same date you started with.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="16)">16)<a class="anchor-link" href="#16)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Take <a href="https://raw.githubusercontent.com/MannyMoo/IntroductionToPython/master/vectors.txt">this file</a>, which has three integers per line, read each set of three into an instance of your 3-vector class defined in Q. 13, and add these to a list.</li>
+<li>Check each 3-vector in the list against every other 3-vector in the list to see if they're orthogonal, and count how many (unique) pairs of vectors are orthogonal.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="17)">17)<a class="anchor-link" href="#17)">&#182;</a></h2>
 </div>
 </div>
 </div>
