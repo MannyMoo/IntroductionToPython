@@ -12456,7 +12456,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4379065160 True
+<pre>4342826888 True
 </pre>
 </div>
 </div>
@@ -14088,7 +14088,7 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>11786 days, 0:00:00 &lt;class &#39;datetime.timedelta&#39;&gt;
+<pre>12137 days, 0:00:00 &lt;class &#39;datetime.timedelta&#39;&gt;
 [&#39;__abs__&#39;, &#39;__add__&#39;, &#39;__bool__&#39;, &#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__divmod__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__floordiv__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__mod__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__neg__&#39;, &#39;__new__&#39;, &#39;__pos__&#39;, &#39;__radd__&#39;, &#39;__rdivmod__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__rfloordiv__&#39;, &#39;__rmod__&#39;, &#39;__rmul__&#39;, &#39;__rsub__&#39;, &#39;__rtruediv__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__sub__&#39;, &#39;__subclasshook__&#39;, &#39;__truediv__&#39;, &#39;days&#39;, &#39;max&#39;, &#39;microseconds&#39;, &#39;min&#39;, &#39;resolution&#39;, &#39;seconds&#39;, &#39;total_seconds&#39;]
 </pre>
 </div>
@@ -14123,7 +14123,7 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>11786
+<pre>12137
 </pre>
 </div>
 </div>
@@ -14191,7 +14191,7 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>I am 11786 days old.
+<pre>I am 12137 days old.
 </pre>
 </div>
 </div>
@@ -14369,25 +14369,75 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-59-339ad186ebd5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;vectors.txt&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> fvec <span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">for</span> line <span class="ansi-green-fg">in</span> fvec <span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">         </span>vec <span class="ansi-blue-fg">=</span> ThreeVector<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">[</span>int<span class="ansi-blue-fg">(</span>val<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> val <span class="ansi-green-fg">in</span> line<span class="ansi-blue-fg">.</span>split<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>         vectors<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>vec<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-
-<span class="ansi-green-fg">&lt;ipython-input-59-339ad186ebd5&gt;</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;vectors.txt&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> fvec <span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">for</span> line <span class="ansi-green-fg">in</span> fvec <span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">         </span>vec <span class="ansi-blue-fg">=</span> ThreeVector<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">[</span>int<span class="ansi-blue-fg">(</span>val<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> val <span class="ansi-green-fg">in</span> line<span class="ansi-blue-fg">.</span>split<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>         vectors<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>vec<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-
-<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>v1: (19700, -12805, 20174)   , v2: (932, -118, -985)        , orthogonal? True
+v1: (19700, -12805, 20174)   , v2: (-929, 4645, -840)       , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-19509, 1858, -20318)   , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-4039, 3462, 1946)      , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-3940, -7880, -2784)    , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (2885, -9809, -13316)    , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-970, -26, 929)         , orthogonal? False
+v1: (19700, -12805, 20174)   , v2: (-526, -938, 577)        , orthogonal? False
+v1: (932, -118, -985)        , v2: (-929, 4645, -840)       , orthogonal? False
+v1: (932, -118, -985)        , v2: (-19509, 1858, -20318)   , orthogonal? False
+v1: (932, -118, -985)        , v2: (-4039, 3462, 1946)      , orthogonal? False
+v1: (932, -118, -985)        , v2: (-3940, -7880, -2784)    , orthogonal? True
+v1: (932, -118, -985)        , v2: (2885, -9809, -13316)    , orthogonal? False
+v1: (932, -118, -985)        , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (932, -118, -985)        , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (932, -118, -985)        , v2: (-19700, -20685, -16162) , orthogonal? True
+v1: (932, -118, -985)        , v2: (-970, -26, 929)         , orthogonal? False
+v1: (932, -118, -985)        , v2: (-526, -938, 577)        , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-19509, 1858, -20318)   , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-4039, 3462, 1946)      , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-3940, -7880, -2784)    , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (2885, -9809, -13316)    , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (-929, 4645, -840)       , v2: (-970, -26, 929)         , orthogonal? True
+v1: (-929, 4645, -840)       , v2: (-526, -938, 577)        , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (-4039, 3462, 1946)      , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (-3940, -7880, -2784)    , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (2885, -9809, -13316)    , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (-19509, 1858, -20318)   , v2: (-970, -26, 929)         , orthogonal? True
+v1: (-19509, 1858, -20318)   , v2: (-526, -938, 577)        , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (-3940, -7880, -2784)    , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (2885, -9809, -13316)    , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (-970, -26, 929)         , orthogonal? False
+v1: (-4039, 3462, 1946)      , v2: (-526, -938, 577)        , orthogonal? True
+v1: (-3940, -7880, -2784)    , v2: (2885, -9809, -13316)    , orthogonal? False
+v1: (-3940, -7880, -2784)    , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (-3940, -7880, -2784)    , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (-3940, -7880, -2784)    , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (-3940, -7880, -2784)    , v2: (-970, -26, 929)         , orthogonal? False
+v1: (-3940, -7880, -2784)    , v2: (-526, -938, 577)        , orthogonal? False
+v1: (2885, -9809, -13316)    , v2: (-8655, -10963, -25712)  , orthogonal? False
+v1: (2885, -9809, -13316)    , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (2885, -9809, -13316)    , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (2885, -9809, -13316)    , v2: (-970, -26, 929)         , orthogonal? False
+v1: (2885, -9809, -13316)    , v2: (-526, -938, 577)        , orthogonal? True
+v1: (-8655, -10963, -25712)  , v2: (-18580, 2787, -19322)   , orthogonal? False
+v1: (-8655, -10963, -25712)  , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (-8655, -10963, -25712)  , v2: (-970, -26, 929)         , orthogonal? False
+v1: (-8655, -10963, -25712)  , v2: (-526, -938, 577)        , orthogonal? True
+v1: (-18580, 2787, -19322)   , v2: (-19700, -20685, -16162) , orthogonal? False
+v1: (-18580, 2787, -19322)   , v2: (-970, -26, 929)         , orthogonal? True
+v1: (-18580, 2787, -19322)   , v2: (-526, -938, 577)        , orthogonal? False
+v1: (-19700, -20685, -16162) , v2: (-970, -26, 929)         , orthogonal? False
+v1: (-19700, -20685, -16162) , v2: (-526, -938, 577)        , orthogonal? False
+v1: (-970, -26, 929)         , v2: (-526, -938, 577)        , orthogonal? False
+N. orthogonal: 9 / 66
+</pre>
 </div>
 </div>
 
@@ -14405,7 +14455,7 @@ kwargs = {&#39;a&#39;: 4, &#39;b&#39;: 5, &#39;c&#39;: 6}
 
 <span class="kn">import</span> <span class="nn">random</span>
 
-<span class="c1"># Ensures it always generatesd</span>
+<span class="c1"># Ensures it always generates the same file.</span>
 <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
 <span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
