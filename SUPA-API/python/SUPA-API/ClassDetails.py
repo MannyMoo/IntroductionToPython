@@ -4,10 +4,11 @@ import requests
 
 homeurl = 'https://my.supa.ac.uk/'
 loginurl = 'https://my.supa.ac.uk/login/index.php'
-detailsurl = 'https://my.supa.ac.uk/user/index.php?contextid=4668&roleid=0&id=129&search&perpage=5000'
+#detailsurl = 'https://my.supa.ac.uk/user/index.php?contextid=4668&roleid=0&id=129&search&perpage=5000'
+detailsurl = 'https://my.supa.ac.uk/user/index.php?contextid=4668&id=129&perpage=5000'
 
 logindetails = {'username' : 'michaelalexander',
-                'password' : raw_input('password'),
+                'password' : raw_input('password: '),
                 }
 
 session_requests = requests.session()
@@ -16,6 +17,9 @@ loginresult = session_requests.post(loginurl,
                                     headers = dict(referer=loginurl))
 detailsresult = session_requests.get(detailsurl,
                                      headers = dict(referer=detailsurl))
+print loginresult.content
+print '******'
+print detailsresult.content
 
 def between(string, start, end) :
     istart = string.find(start) + len(start)
