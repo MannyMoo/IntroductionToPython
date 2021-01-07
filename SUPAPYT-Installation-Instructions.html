@@ -14318,10 +14318,10 @@ a.anchor-link {
 <p>To pick up the correct executables on the commandline you need to add:</p>
 
 </div>
-</div>export PATH="/usr/local/opt/python/libexec/bin:~/Library/Python/3.7/bin:/usr/local/share/python:$PATH"
+</div>export PATH="/usr/local/opt/python/libexec/bin:~/Library/Python/3.9/bin:/usr/local/share/python:$PATH"
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>to your login script, normally <code>~/.bash_profile</code>. Then execute your login script with</p>
+<p>to your login script, normally <code>~/.bash_profile</code>. Note that the "3.9" might change depending on exactly which python version you have installed. Then execute your login script with</p>
 
 </div>
 </div>. ~/.bash_profile
@@ -14364,16 +14364,10 @@ a.anchor-link {
 </div>sudo apt-get -y install ipython3
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Updgrade <code>pip</code>, the python package manager, with:</p>
+<p>Then follow the instructions to install via <code>pip</code> below.</p>
 
 </div>
-</div>sudo -H pip3 install --upgrade pip
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Finally install Jupyter using <code>pip</code>:</p>
-
 </div>
-</div>sudo -H pip3 install jupyter
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Via-pip-(anything-with-an-existing-python-and-pip-installation)">Via <code>pip</code> (anything with an existing <code>python</code> and <code>pip</code> installation)<a class="anchor-link" href="#Via-pip-(anything-with-an-existing-python-and-pip-installation)">&#182;</a></h2>
@@ -14381,7 +14375,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If you've already got a basic <code>python</code> installation which includes <code>pip</code> (the python package manager) and you're happy with that version then you can just use <code>pip</code> to install Jupyter (as in the last steps of the installation using <code>apt-get</code>).</p>
+<p>If you've already got a basic <code>python</code> installation which includes <code>pip</code> (the python package manager) and you're happy with that version then you can just use <code>pip</code> to install Jupyter.</p>
 <p>Depending on your installation, you might need to use <code>pip3</code> rather than <code>pip</code> in order to use python 3.</p>
 <p>First, upgrade <code>pip</code> with:</p>
 
@@ -14395,22 +14389,76 @@ a.anchor-link {
 </div>sudo -H pip install --update pip
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>This is because packages are installed system wide, which requires root permissions.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Then simply install Jupyter with:</p>
 
 </div>
-</div>pip install jupyter
+</div>pip install notebook
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>or for linux:</p>
 
 </div>
-</div>sudo -H pip install jupyter
+</div>sudo -H pip install notebook
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Alternatively, you can install only for the current user with</p>
+
+</div>
+</div>pip install --user notebook
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>or you can install in a virtual environment, as detailed next.</p>
+
+</div>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>That's all there is to it!</p>
 
 </div>
 </div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Installing-in-a-virtual-environment">Installing in a virtual environment<a class="anchor-link" href="#Installing-in-a-virtual-environment">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>A virtual environment is entirely self contained. It can be useful to install python packages in a virtual environment so that it doesn't interfere with (or break) your system python installation, or if you don't have admin access on your machine.</p>
+<p>Following <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">this</a>, you can create a new virtual environment called "env" with</p>
+
+</div>
+</div>python3 -m venv env
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Then you can launch the environment, for OSX/Linux, with</p>
+
+</div>
+</div>source env/bin/activate
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>or Windows, with</p>
+
+</div>
+</div>.\env\Scripts\activate
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Then, with the environment active, follow the instructions above for installing via <code>pip</code>. Everything you install with the environment active will only be available in the environment.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>When you're done, quit the environment with</p>
+
+</div>
+</div>deactivate
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src = 'https://imgs.xkcd.com/comics/success.png' width = 450 alt = 'success'></p>
@@ -14464,7 +14512,7 @@ a.anchor-link {
 <p>Then next time you run python you'll be able to do:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
@@ -14476,32 +14524,6 @@ a.anchor-link {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-6df3e4b517ba&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> uncertainties
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;uncertainties&#39;</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
