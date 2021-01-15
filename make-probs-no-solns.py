@@ -16,7 +16,10 @@ newcells = []
 lastadd = ''
 for cell in jprobs['cells'] :
     if cell['cell_type'] == 'code':
-        if lastadd != 'code':
+        if cell['source'] and cell['source'][0].startswith('# Eg'):
+            newcells.append(cell)
+            lastadd = 'notcode'
+        elif lastadd != 'code':
             newcells.append(codecell)
             lastadd = 'code'
     else:
