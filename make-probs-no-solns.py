@@ -13,16 +13,15 @@ codecell = {'cell_type': 'code',
             'source': []}
 
 newcells = []
-lasttype = ''
 lastadd = ''
 for cell in jprobs['cells'] :
-    if cell['cell_type'] != 'code' and lasttype == 'code' and lastadd != 'code' :
-        newcells.append(codecell)
-    lasttype = cell['cell_type']
-    if cell['cell_type'] != 'code' or (cell['source'] and cell['source'][0].startswith('#_')) :
+    if cell['cell_type'] == 'code':
+        if lastadd != 'code':
+            newcells.append(codecell)
+            lastadd = 'code'
+    else:
         newcells.append(cell)
-        lastadd = cell['cell_type']
-        
+        lastadd = 'notcode'
 jprobs['cells'] = newcells
 
 with open('SUPAPYT-LabProblems.ipynb', 'w') as fprobs :
