@@ -14259,6 +14259,12 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>(<a href="https://mannymoo.github.io/IntroductionToPython/">Home</a>)</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 
 </div>
@@ -20599,8 +20605,8 @@ c
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>"Dictionaries" store elements in pairs of (key, element).</li>
-<li>Elements are then accessed by keys, whereas lists and tuples access elements by integers.</li>
-<li>A key can be any type of object (so long as it's immutable), as can elements.</li>
+<li>Elements are then accessed by keys, whereas lists and tuples access elements by index (integers).</li>
+<li>A key can be any type of object (so long as it's immutable), as can the elements.</li>
 </ul>
 
 </div>
@@ -20650,7 +20656,10 @@ True
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>The syntax for creating a dictionary is: <code>d = {key1 : element1, key2 : element2, ...}</code>.</li>
+<li>The syntax for creating a dictionary is: </li>
+</ul>
+<p><code>d = {key1 : element1, key2 : element2, ...}</code>.</p>
+<ul>
 <li>Strings are often used as keys.</li>
 </ul>
 
@@ -20813,7 +20822,8 @@ True
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[141]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You don&#39;t have to use strings as keys.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You don&#39;t have to use strings as keys, you can</span>
+<span class="c1"># use dicts to map pairs of (almost) any types</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="kc">None</span> <span class="p">:</span> <span class="s1">&#39;nothing&#39;</span><span class="p">,</span> 
      <span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span> <span class="p">:</span> <span class="mi">84</span><span class="p">,</span> 
@@ -20862,11 +20872,10 @@ nothing
              <span class="s1">&#39;Sir Gallahad&#39;</span> <span class="p">:</span> <span class="mi">3000</span><span class="p">}</span>
 
 <span class="c1"># Get a sequence of keys with the keys() member method.</span>
-
+<span class="c1"># Convert it to a list just so it&#39;s printed nicely.</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">phonebook</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
 
-<span class="c1"># or a sequence of the element values with values()</span>
-
+<span class="c1"># Get a sequence of the element values with values()</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">phonebook</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
 </pre></div>
 
@@ -21292,7 +21301,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;e&#39;, &#39;s&#39;, &#39;d&#39;, &#39;a&#39;, &#39; &#39;, &#39;g&#39;, &#39;n&#39;, &#39;m&#39;, &#39;p&#39;}
+<pre>{&#39;n&#39;, &#39;e&#39;, &#39;d&#39;, &#39;p&#39;, &#39;a&#39;, &#39;m&#39;, &#39;s&#39;, &#39; &#39;, &#39;g&#39;}
 </pre>
 </div>
 </div>
@@ -21457,7 +21466,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;e&#39;, &#39;k&#39;, &#39;s&#39;, &#39;d&#39;, &#39;a&#39;, &#39; &#39;, &#39;g&#39;, &#39;n&#39;, &#39;m&#39;, &#39;p&#39;}
+<pre>{&#39;n&#39;, &#39;e&#39;, &#39;d&#39;, &#39;p&#39;, &#39;a&#39;, &#39;m&#39;, &#39;k&#39;, &#39;s&#39;, &#39; &#39;, &#39;g&#39;}
 True
 </pre>
 </div>
@@ -21495,7 +21504,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39;s&#39;, &#39;d&#39;, &#39;a&#39;, &#39; &#39;, &#39;g&#39;, &#39;n&#39;, &#39;m&#39;, &#39;p&#39;}
+<pre>{&#39;n&#39;, &#39;d&#39;, &#39;p&#39;, &#39;a&#39;, &#39;m&#39;, &#39;k&#39;, &#39;s&#39;, &#39; &#39;, &#39;g&#39;}
 False
 </pre>
 </div>
@@ -21552,6 +21561,15 @@ False
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Looping">Looping<a class="anchor-link" href="#Looping">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Loops allow you to repeatedly evaluate a block of code with different variable values.</li>
+<li>Since most programs are designed for repetitive tasks (eg, iterating over entries in a dataset), you'll likely make wide use of loops and sequences.</li>
+</ul>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -21660,6 +21678,7 @@ False
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>These loop over the elements in a sequence.</li>
 <li>The "<code>range</code>" built-in method returns a sequence of integers, which is very useful for looping. </li>
 </ul>
 
@@ -21785,8 +21804,14 @@ False
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>The syntax for looping over any sequence is <code>for element in sequence :</code>, eg:</li>
+<li>The syntax for looping over any sequence is </li>
 </ul>
+<p><code>for element in sequence :</code></p>
+<ul>
+<li>Within the indented block of clode of the loop, the <code>element</code> variable (you can call it whatever you want) then takes the values of each element in the sequence in turn.</li>
+<li>The block of code is evaluated for each value in the sequence (each iteration).</li>
+</ul>
+<p>Eg:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -22012,7 +22037,7 @@ s
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>We've now seen a few more complicated objects that have various attributes and member methods: str, complex, list, tuple, dict, set.</li>
+<li>We've now seen a few more complicated objects that have various attributes and member methods: <code>str</code>, <code>complex</code>, <code>list</code>, <code>tuple</code>, <code>dict</code>, <code>set</code>.</li>
 <li>In other languages you normally have to look up a reference library or examine source code to find the full list of attributes and functions for a given class.</li>
 <li>In python, however, documentation is built in, and an object can provide almost all the info you'll need on it interactively!</li>
 </ul>
@@ -22053,9 +22078,9 @@ s
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>Any variable prefixed with underscores is normally not meant to be accessed directly, only internally, though you can still access them should you have need.</li>
-<li>"builtins" contains all the default classes and functions available in python.</li>
-<li>"doc" contains the documentation on the current module. </li>
-<li>"name" and "package" are the name of the current module and the package to which it belongs.</li>
+<li><code>builtins</code> contains all the default classes and functions available in python.</li>
+<li><code>doc</code> contains the documentation on the current module. </li>
+<li><code>name</code> and <code>package</code> are the name of the current module and the package to which it belongs.</li>
 </ul>
 
 </div>
@@ -22560,6 +22585,7 @@ False
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="o">.</span><span class="mi">234</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -22581,6 +22607,7 @@ False
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>True
 False
+True
 </pre>
 </div>
 </div>
@@ -22595,6 +22622,18 @@ False
 <ul>
 <li>For further info try <code>dir</code> or <code>help</code> on any object, class name, method, type specification, or indeed anything!</li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src = 'https://i.redd.it/c8cw76gmohy11.jpg' alt = 'ancient code' width = 400></p>
 
 </div>
 </div>
@@ -23613,9 +23652,12 @@ Airspeed-velocity (unladen): 3.4 m/s
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[206]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swallow1</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">9.2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">swallow1</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can access class attributes through the class itself</span>
+<span class="c1"># or through instances of the class, they both refer to the</span>
+<span class="c1"># same object.</span>
+<span class="n">swallow1</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">9.2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">swallow1</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">swallow1</span><span class="o">.</span><span class="n">verbose</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -23635,8 +23677,8 @@ Airspeed-velocity (unladen): 3.4 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>False
-False
+<pre>False 4307802464
+False 4307802464
 </pre>
 </div>
 </div>
@@ -23652,6 +23694,8 @@ False
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change the value of the class attribute like so:</span>
+<span class="c1"># (to change the value for all class instances this</span>
+<span class="c1"># has to be done via the class itself)</span>
 <span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">swallow2</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">5.4</span><span class="p">)</span>
 </pre></div>
@@ -23736,18 +23780,6 @@ True
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src = 'https://i.redd.it/c8cw76gmohy11.jpg' alt = 'ancient code' width = 400></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Modules">Modules<a class="anchor-link" href="#Modules">&#182;</a></h2>
 </div>
 </div>
@@ -23779,17 +23811,17 @@ True
 <li>There're different types of modules:<ul>
 <li>Built-in modules:<ul>
 <li>Always available.</li>
-<li>Popular examples are: sys, math, time.</li>
+<li>Popular examples are: <code>sys</code>, <code>math</code>, <code>time</code>.</li>
 </ul>
 </li>
 <li>Standard library modules:<ul>
 <li>Come with a standard python install.</li>
-<li>Eg: os, urllib.</li>
+<li>Eg: <code>os</code>, <code>urllib</code>.</li>
 </ul>
 </li>
 <li>Third-party modules:<ul>
 <li>Written &amp; maintained by someone other than the python foundation.</li>
-<li>Eg: PyRoot (a python port of the ROOT c++ library), numpy, matplotlib.</li>
+<li>Eg: PyRoot (a python port of the ROOT c++ library), <code>numpy</code>, <code>matplotlib</code>.</li>
 </ul>
 </li>
 <li>User defined modules:<ul>
@@ -23859,7 +23891,9 @@ True
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call a method or access a variable contained in a module.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call a method or access a variable contained in a module</span>
+<span class="c1"># in the same way as you&#39;d access methods &amp; attributes of</span>
+<span class="c1"># any other python object.</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">))</span>
@@ -25794,8 +25828,8 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>str : 2021-01-15
-repr: datetime.date(2021, 1, 15)
+<pre>str : 2021-01-27
+repr: datetime.date(2021, 1, 27)
 </pre>
 </div>
 </div>
@@ -25838,7 +25872,7 @@ repr: datetime.date(2021, 1, 15)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>2021-01-15
+<pre>2021-01-27
 </pre>
 </div>
 </div>
@@ -25875,7 +25909,7 @@ repr: datetime.date(2021, 1, 15)
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>datetime.date(2021, 1, 15)</pre>
+<pre>datetime.date(2021, 1, 27)</pre>
 </div>
 
 </div>
@@ -25974,7 +26008,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 <span class="ansi-red-fg">    eval(str(today)) == today</span>
 
 <span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;string&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    2021-01-15</span>
+<span class="ansi-red-fg">    2021-01-27</span>
           ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
 </pre>
@@ -26055,7 +26089,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>import datetime
-today = datetime.date(2021, 1, 15)
+today = datetime.date(2021, 1, 27)
 
 </pre>
 </div>
@@ -26101,7 +26135,7 @@ today = datetime.date(2021, 1, 15)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>2021-01-15
+<pre>2021-01-27
 True
 </pre>
 </div>
@@ -26115,7 +26149,7 @@ True
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>This has the advantage that the saved file is python readable without any extra work.</li>
+<li>This has the advantage that the saved file is python readable.</li>
 <li>However, the technique of writing files in a python readable manner is prone to error.</li>
 <li>Also, while <code>repr()</code> works on all built-in types, it doesn't work on everything.</li>
 <li>For user-defined types you'd need to implement a <code>__repr__</code> member method which returns a string representation of the object that can be understood by the python interpreter and will reproduce exactly the same object.</li>
@@ -26193,7 +26227,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe5\x01\x0f\x94\x85\x94R\x94.&#39;
+<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe5\x01\x1b\x94\x85\x94R\x94.&#39;
 </pre>
 </div>
 </div>
@@ -26240,7 +26274,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe5\x01\x0f\x94\x85\x94R\x94.&#39;</pre>
+<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe5\x01\x1b\x94\x85\x94R\x94.&#39;</pre>
 </div>
 
 </div>
@@ -26348,7 +26382,7 @@ True
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[267]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">Birds</span> <span class="kn">import</span> <span class="n">Swallow</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">Ornothology.Birds</span> <span class="kn">import</span> <span class="n">Swallow</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">8.23</span><span class="p">)</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;PickledSwallow.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fpickle</span> <span class="p">:</span>
@@ -26467,7 +26501,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpy5s_6quz.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
+<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpgf9g0y2s.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
 </pre>
 </div>
 </div>
@@ -27379,7 +27413,8 @@ That didn&#39;t work!
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[290]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">inverse</span><span class="p">(</span><span class="mf">8.</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then call it like any other function</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inverse</span><span class="p">(</span><span class="mf">8.</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -27913,6 +27948,51 @@ class filter(object)
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[303]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;any&#39; and &#39;all&#39; builtins are useful to test a condition</span>
+<span class="c1"># on all elements in a sequence.</span>
+<span class="c1"># &#39;any&#39; requires any of the elements to evaluate to True</span>
+<span class="c1"># while &#39;all&#39; requires all of them to be True</span>
+<span class="c1"># They&#39;re particularly useful in conjunction with &#39;map&#39;</span>
+<span class="c1"># along with a test function that returns a boolean.</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">,</span> <span class="n">l</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">,</span> <span class="n">l</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -27938,7 +28018,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[303]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[304]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
@@ -27979,7 +28059,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[304]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[305]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Which is equivalent to :</span>
@@ -28029,51 +28109,12 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[305]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[306]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For a list:</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[305]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[306]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Also for tuples:</span>
-
-<span class="nb">tuple</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="k">3</span> for i in range(10))
 </pre></div>
 
      </div>
@@ -28095,7 +28136,7 @@ class filter(object)
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(0, 1, 2, 0, 1, 2, 0, 1, 2, 0)</pre>
+<pre>[&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]</pre>
 </div>
 
 </div>
@@ -28108,6 +28149,45 @@ class filter(object)
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[307]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Also for tuples:</span>
+
+<span class="nb">tuple</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="k">3</span> for i in range(10))
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[307]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(0, 1, 2, 0, 1, 2, 0, 1, 2, 0)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[308]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For lists this can also be put in square brackets</span>
@@ -28129,7 +28209,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[307]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[308]:</div>
 
 
 
@@ -28155,7 +28235,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[308]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[309]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">tuple</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">2</span> == 0)
@@ -28174,7 +28254,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[308]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[309]:</div>
 
 
 
@@ -28262,10 +28342,11 @@ class filter(object)
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>Before you write anything, think through how to structure your code.</li>
-<li>Don't reinvent the wheel - code may already exist that fits your needs. </li>
+<li>Don't reinvent the wheel - code may already exist that fits your needs (Google is always a programmer's friend). </li>
 <li>Break the problem into its most basic components and write/use a class or function for each.</li>
 <li>Don't copy &amp; paste. Use functions, classes, modules &amp; packages to reuse code. </li>
-<li>Avoid hard coding anything - make it configurable. </li>
+<li>Avoid hard coding anything - make it configurable.</li>
+<li>Always add doc strings!</li>
 <li>Use version control, like <a href="https://github.com/">github</a>.</li>
 <li>Don't be afraid to rewrite if necessary - better that than continue to build on poorly structured code. </li>
 </ul>
@@ -28302,7 +28383,8 @@ class filter(object)
 <li>PyPI - <a href="https://pypi.python.org/pypi">pypi.python.org/pypi</a><ul>
 <li>The Python Package Index. Official repository of 3rd party python packages.</li>
 <li>A huge number of packages for all purposes are available.</li>
-<li>You can use the python package manager, <a href="https://pypi.python.org/pypi/pip">pip</a> to easily install packages from PyPI (though if you're already using a different package manager for your python install stick with that). </li>
+<li>You can use the python package manager, <a href="https://pypi.python.org/pypi/pip">pip</a> to easily install packages from PyPI (though if you're already using a different package manager for your python install stick with that).</li>
+<li>Use of <code>pip</code> is shown in the <a href="https://mannymoo.github.io/IntroductionToPython/SUPAPYT-Installation-Instructions.html#Adding-packages-to-your-installation">installation instructions</a>.</li>
 </ul>
 </li>
 <li><code>uncertainties</code> - <a href="https://pypi.python.org/pypi/uncertainties">pypi.python.org/pypi/uncertainties</a><ul>
@@ -28383,62 +28465,12 @@ class filter(object)
 <p><a href="https://www.youtube.com/watch?v=W3rP-8mWWeY">Happy Pythonising!</a></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[309]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;/usr&#39;</span><span class="p">),</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
-</pre></div>
-
-     </div>
 </div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[309]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;/usr/local/Cellar/root/6.22.06_2/lib/root&#39;,
- &#39;/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9/lib/python39.zip&#39;,
- &#39;/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9/lib/python3.9&#39;,
- &#39;/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload&#39;,
- &#39;/usr/local/Cellar/root/6.14.06/lib/root&#39;]</pre>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>(<a href="https://mannymoo.github.io/IntroductionToPython/">Home</a>)</p>
 
 </div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 </body>
 
