@@ -15740,9 +15740,9 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can check the type of any variable using the &quot;type&quot; method.</span>
-<span class="c1"># A method is called (excuted) using brackets which contain the </span>
-<span class="c1"># arguments that&#39;re passed to the method.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can check the type of any variable using the &quot;type&quot; function.</span>
+<span class="c1"># As seen with &quot;print&quot;, a function is called (excuted) using </span>
+<span class="c1"># brackets which contain the arguments that&#39;re passed to the function.</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -15916,7 +15916,7 @@ a.anchor-link {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Anything with a decimal point or in scientific notation is a float.</span>
 <span class="c1"># In python all floats are &quot;double&quot; precision (normally 16 d.p.), </span>
-<span class="c1"># &quot;single&quot; precision float doesn&#39;t exist.</span>
+<span class="c1"># &quot;single&quot; precision float (as in some other languages) doesn&#39;t exist</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mf">123.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -16116,8 +16116,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Also use &#39;.&#39; for member methods.</span>
-<span class="c1"># You need brackets following a method in order</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Also use &#39;.&#39; for member functions.</span>
+<span class="c1"># You need brackets following a function in order</span>
 <span class="c1"># to call (execute) it, even if there are no </span>
 <span class="c1"># arguments.</span>
 
@@ -16159,7 +16159,7 @@ a.anchor-link {
 <ul>
 <li>Here're the first examples of two key concepts in object oriented programming:<ul>
 <li>Member attributes, which contain the data for the object.</li>
-<li>Member methods, which can access, modify or perform other operations on the attributes.</li>
+<li>Member functions, which can access, modify or perform other operations on the attributes.</li>
 </ul>
 </li>
 <li>The <code>complex</code> class describes the structure for complex numbers: every instance has a value for the <code>real</code> and <code>imag</code> attributes, can call methods like <code>conjugate</code>, and perform basic numerical operations.</li>
@@ -20966,7 +20966,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;n&#39;, &#39;g&#39;, &#39;e&#39;, &#39; &#39;, &#39;m&#39;, &#39;d&#39;, &#39;s&#39;, &#39;p&#39;, &#39;a&#39;}
+<pre>{&#39;s&#39;, &#39; &#39;, &#39;a&#39;, &#39;g&#39;, &#39;n&#39;, &#39;e&#39;, &#39;p&#39;, &#39;m&#39;, &#39;d&#39;}
 </pre>
 </div>
 </div>
@@ -21131,7 +21131,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39;n&#39;, &#39;g&#39;, &#39;e&#39;, &#39; &#39;, &#39;m&#39;, &#39;d&#39;, &#39;s&#39;, &#39;p&#39;, &#39;a&#39;}
+<pre>{&#39;s&#39;, &#39; &#39;, &#39;a&#39;, &#39;g&#39;, &#39;n&#39;, &#39;e&#39;, &#39;p&#39;, &#39;m&#39;, &#39;k&#39;, &#39;d&#39;}
 True
 </pre>
 </div>
@@ -21169,7 +21169,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39;n&#39;, &#39;g&#39;, &#39; &#39;, &#39;m&#39;, &#39;d&#39;, &#39;s&#39;, &#39;p&#39;, &#39;a&#39;}
+<pre>{&#39;s&#39;, &#39; &#39;, &#39;a&#39;, &#39;g&#39;, &#39;n&#39;, &#39;p&#39;, &#39;m&#39;, &#39;k&#39;, &#39;d&#39;}
 False
 </pre>
 </div>
@@ -23342,8 +23342,8 @@ Airspeed-velocity (unladen): 3.4 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>False 4527155552
-False 4527155552
+<pre>False 4398348640
+False 4398348640
 </pre>
 </div>
 </div>
@@ -26166,7 +26166,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmp1ddczs5x.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
+<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmphc_4fam8.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
 </pre>
 </div>
 </div>
