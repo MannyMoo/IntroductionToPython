@@ -1,7 +1,7 @@
 # Currently, html in markdown cells gets rendered as text when converting
 # notebooks to html. So they're converted back to proper html after with sed.
 
-all : index.html SUPAPYT-IntroductionToPython.html SUPAPYT-LabProblems.html SUPAPYT-LabProblems-HalfCompleted.html SUPAPYT-LabProblems-Completed.html SUPAPYT-Installation-Instructions.html
+all : index.html SUPAPYT-IntroductionToPython.html SUPAPYT-LabProblems.html SUPAPYT-LabProblems-HalfCompleted.html SUPAPYT-LabProblems-Completed.html SUPAPYT-Installation-Instructions.html Getting-started.html
 
 SUPAPYT-IntroductionToPython.html : SUPAPYT-IntroductionToPython.ipynb
 	@sed -i '' 's/"help()"/"#help()"/' $<
