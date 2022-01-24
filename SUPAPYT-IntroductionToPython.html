@@ -18656,7 +18656,7 @@ True True True
 <li>For any repeated operations you want to define a function.</li>
 <li>This is done with the <code>def</code> keyword followed by the name of the function.</li>
 <li>Arguments to the function are put in brackets following the name of the function.</li>
-<li>There's no need for a separate header file - declare and implement as needed.</li>
+<li>There's no need for a separate header file (like many other languages) - declare and implement as needed.</li>
 <li>No return type needs to be specified, nor argument types (if there are any arguments).</li>
 <li>In fact no need to specify if the function returns anything!</li>
 </ul>
@@ -18669,6 +18669,7 @@ True True True
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Put &quot;Hello world!&quot; into a function.</span>
+<span class="c1"># It doesn&#39;t take any arguments.</span>
 
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">()</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
@@ -18951,14 +18952,14 @@ True
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># When printing, the default value of &#39;end&#39; is &#39;\n&#39;,</span>
 <span class="c1"># so each call to print outputs on a new line.</span>
-<span class="c1"># Using end = &#39; &#39; means they&#39;re printed on the same</span>
+<span class="c1"># Using end=&#39; &#39; means they&#39;re printed on the same</span>
 <span class="c1"># line with spaces between them.</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21084,7 +21085,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39; &#39;, &#39;m&#39;, &#39;d&#39;, &#39;s&#39;, &#39;a&#39;, &#39;e&#39;, &#39;g&#39;, &#39;n&#39;, &#39;p&#39;}
+<pre>{&#39;g&#39;, &#39;p&#39;, &#39;s&#39;, &#39;m&#39;, &#39;e&#39;, &#39;d&#39;, &#39; &#39;, &#39;a&#39;, &#39;n&#39;}
 </pre>
 </div>
 </div>
@@ -21249,7 +21250,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39; &#39;, &#39;m&#39;, &#39;d&#39;, &#39;s&#39;, &#39;a&#39;, &#39;e&#39;, &#39;g&#39;, &#39;n&#39;, &#39;p&#39;}
+<pre>{&#39;g&#39;, &#39;p&#39;, &#39;s&#39;, &#39;m&#39;, &#39;e&#39;, &#39;d&#39;, &#39;k&#39;, &#39; &#39;, &#39;a&#39;, &#39;n&#39;}
 True
 </pre>
 </div>
@@ -21287,7 +21288,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39; &#39;, &#39;m&#39;, &#39;d&#39;, &#39;s&#39;, &#39;a&#39;, &#39;g&#39;, &#39;n&#39;, &#39;p&#39;}
+<pre>{&#39;g&#39;, &#39;p&#39;, &#39;s&#39;, &#39;m&#39;, &#39;d&#39;, &#39;k&#39;, &#39; &#39;, &#39;a&#39;, &#39;n&#39;}
 False
 </pre>
 </div>
@@ -23460,8 +23461,8 @@ Airspeed-velocity (unladen): 3.4 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>False 4558375264
-False 4558375264
+<pre>False 4547139936
+False 4547139936
 </pre>
 </div>
 </div>
@@ -26284,7 +26285,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmp4j7lhan5.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
+<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpd59ys8_2.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
 </pre>
 </div>
 </div>
