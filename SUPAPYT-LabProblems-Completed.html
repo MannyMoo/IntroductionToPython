@@ -14775,7 +14775,11 @@ True
 <ul>
 <li>We've discussed briefly the idea of "mutable" and "immutable" objects in python.</li>
 <li>All basic types are immutable apart from lists and dictionaries.</li>
-<li>See what happens when you assign a variable to the same object, then change the original variable.</li>
+<li>See what happens when you assign a variable to the same object, then change the original variable.<ul>
+<li>Eg, assign two variables to the same <code>int</code> value, then change the value of one of the variables and check if it changes the value of the other variable.</li>
+<li>Try doing the same but assign a <code>list</code> instead of an <code>int</code>. Modify the the list (change/delete/add an element) and check the values of both variables.</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -14953,7 +14957,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>4442855168 True
+<pre>4538226432 True
 </pre>
 </div>
 </div>
@@ -16741,7 +16745,7 @@ kwargs = {&#39;v1&#39;: 3, &#39;v2&#39;: (1+4j)}
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>12885 days, 0:00:00 &lt;class &#39;datetime.timedelta&#39;&gt;
+<pre>12889 days, 0:00:00 &lt;class &#39;datetime.timedelta&#39;&gt;
 [&#39;__abs__&#39;, &#39;__add__&#39;, &#39;__bool__&#39;, &#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__divmod__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__floordiv__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__mod__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__neg__&#39;, &#39;__new__&#39;, &#39;__pos__&#39;, &#39;__radd__&#39;, &#39;__rdivmod__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__rfloordiv__&#39;, &#39;__rmod__&#39;, &#39;__rmul__&#39;, &#39;__rsub__&#39;, &#39;__rtruediv__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__sub__&#39;, &#39;__subclasshook__&#39;, &#39;__truediv__&#39;, &#39;days&#39;, &#39;max&#39;, &#39;microseconds&#39;, &#39;min&#39;, &#39;resolution&#39;, &#39;seconds&#39;, &#39;total_seconds&#39;]
 </pre>
 </div>
@@ -16780,7 +16784,7 @@ kwargs = {&#39;v1&#39;: 3, &#39;v2&#39;: (1+4j)}
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>12885
+<pre>12889
 </pre>
 </div>
 </div>
@@ -16856,7 +16860,7 @@ kwargs = {&#39;v1&#39;: 3, &#39;v2&#39;: (1+4j)}
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>I am 12885 days old.
+<pre>I am 12889 days old.
 </pre>
 </div>
 </div>
