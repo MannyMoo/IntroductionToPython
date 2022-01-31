@@ -21152,7 +21152,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;a&#39;, &#39;e&#39;, &#39;g&#39;, &#39;p&#39;, &#39;m&#39;, &#39;n&#39;, &#39;s&#39;, &#39; &#39;, &#39;d&#39;}
+<pre>{&#39;p&#39;, &#39;a&#39;, &#39; &#39;, &#39;e&#39;, &#39;n&#39;, &#39;g&#39;, &#39;d&#39;, &#39;s&#39;, &#39;m&#39;}
 </pre>
 </div>
 </div>
@@ -21317,7 +21317,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39;a&#39;, &#39;e&#39;, &#39;g&#39;, &#39;p&#39;, &#39;m&#39;, &#39;n&#39;, &#39;s&#39;, &#39; &#39;, &#39;d&#39;}
+<pre>{&#39;p&#39;, &#39;a&#39;, &#39;k&#39;, &#39; &#39;, &#39;e&#39;, &#39;n&#39;, &#39;g&#39;, &#39;d&#39;, &#39;s&#39;, &#39;m&#39;}
 True
 </pre>
 </div>
@@ -21355,7 +21355,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;k&#39;, &#39;a&#39;, &#39;g&#39;, &#39;p&#39;, &#39;m&#39;, &#39;n&#39;, &#39;s&#39;, &#39; &#39;, &#39;d&#39;}
+<pre>{&#39;p&#39;, &#39;a&#39;, &#39;k&#39;, &#39; &#39;, &#39;n&#39;, &#39;g&#39;, &#39;d&#39;, &#39;s&#39;, &#39;m&#39;}
 False
 </pre>
 </div>
@@ -22484,18 +22484,6 @@ True
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src = 'https://i.redd.it/c8cw76gmohy11.jpg' alt = 'ancient code' width = 400></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Classes">Classes<a class="anchor-link" href="#Classes">&#182;</a></h2>
 </div>
 </div>
@@ -22741,29 +22729,57 @@ False
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[192]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Bird</span> <span class="p">:</span>
-    <span class="c1"># Doc strings should be put on classes just like functions.</span>
-    <span class="sd">&#39;&#39;&#39;A class to describe bird characteristics.&#39;&#39;&#39;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the species of this Bird.&#39;&#39;&#39;</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
-    
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Bird&#39;&#39;&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Pokemon</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Basic class describing a Pokemon&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                <span class="n">strongAgainst</span><span class="p">,</span> <span class="n">weakAgainst</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Takes the category of the Pokemon (eg, fire/water),</span>
+<span class="sd">        level, strengths and weaknesses.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">category</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Copy the lists of strengths/weaknesses into new tuples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">strongAgainst</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">weakAgainst</span><span class="p">)</span>
         
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">is_strong_against</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Check if this Pokemon is strong against</span>
+<span class="sd">        another Pokemon.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span>
     
-    <span class="k">def</span> <span class="nf">get_species</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Get the species of this Bird&#39;&#39;&#39;</span>
-        
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span>
+    <span class="k">def</span> <span class="nf">is_weak_against</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Check if this Pokemon is weak against</span>
+<span class="sd">        another Pokemon.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span>
     
-    <span class="k">def</span> <span class="nf">is_species</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Check if this Bird is of the given species.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">increase_exp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exp</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Increase the experience of this Pokemon and</span>
+<span class="sd">        possibly level up.&#39;&#39;&#39;</span>
+        <span class="c1"># Gradually increase experience and level up as</span>
+        <span class="c1"># necessary.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+            
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up this Pokemon.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;grew to level&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">)</span>
         
-        <span class="k">return</span> <span class="n">species</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_species</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">print_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Print info on this Pokemon.&#39;&#39;&#39;</span>
+        <span class="nb">print</span><span class="p">((</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Type: </span><span class="si">{1}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Level: </span><span class="si">{2}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Strong against: </span><span class="si">{3}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Weak against: </span><span class="si">{4}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">,</span>
+                                               <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span><span class="p">),</span>
+                                               <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -22780,42 +22796,23 @@ False
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[193]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">duck</span> <span class="o">=</span> <span class="n">Bird</span><span class="p">(</span><span class="s1">&#39;Duck&#39;</span><span class="p">)</span>
-<span class="n">duck</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">duck</span><span class="o">.</span><span class="n">is_species</span><span class="p">(</span><span class="s1">&#39;Swallow&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make a Charmander</span>
+<span class="n">charmander</span> <span class="o">=</span> <span class="n">Pokemon</span><span class="p">(</span><span class="s1">&#39;Charmander&#39;</span><span class="p">,</span> <span class="s1">&#39;fire&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                     <span class="c1"># Fire is strong against grass &amp; ice</span>
+                     <span class="p">(</span><span class="s1">&#39;grass&#39;</span><span class="p">,</span> <span class="s1">&#39;ice&#39;</span><span class="p">),</span>
+                     <span class="c1"># Fire is weak against water &amp; rock</span>
+                     <span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;rock&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species: Duck
-False
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -22832,7 +22829,7 @@ False
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[194]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">duck</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">charmander</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -22852,7 +22849,7 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;about_me&#39;, &#39;get_species&#39;, &#39;is_species&#39;, &#39;species&#39;]
+<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;category&#39;, &#39;experience&#39;, &#39;increase_exp&#39;, &#39;is_strong_against&#39;, &#39;is_weak_against&#39;, &#39;level&#39;, &#39;level_up&#39;, &#39;name&#39;, &#39;print_info&#39;, &#39;strongAgainst&#39;, &#39;weakAgainst&#39;]
 </pre>
 </div>
 </div>
@@ -22867,9 +22864,9 @@ False
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[195]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># help(Bird) would also work.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># help(Pokemon) would also work.</span>
 
-<span class="n">help</span><span class="p">(</span><span class="n">duck</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">charmander</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -22889,26 +22886,36 @@ False
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Help on Bird in module __main__ object:
+<pre>Help on Pokemon in module __main__ object:
 
-class Bird(builtins.object)
- |  Bird(species)
+class Pokemon(builtins.object)
+ |  Pokemon(name, category, level, strongAgainst, weakAgainst)
  |  
- |  A class to describe bird characteristics.
+ |  Basic class describing a Pokemon
  |  
  |  Methods defined here:
  |  
- |  __init__(self, species)
- |      Constructor. Sets the species of this Bird.
+ |  __init__(self, name, category, level, strongAgainst, weakAgainst)
+ |      Takes the category of the Pokemon (eg, fire/water),
+ |      level, strengths and weaknesses.
  |  
- |  about_me(self)
- |      Print info about this Bird
+ |  increase_exp(self, exp)
+ |      Increase the experience of this Pokemon and
+ |      possibly level up.
  |  
- |  get_species(self)
- |      Get the species of this Bird
+ |  is_strong_against(self, other)
+ |      Check if this Pokemon is strong against
+ |      another Pokemon.
  |  
- |  is_species(self, species)
- |      Check if this Bird is of the given species.
+ |  is_weak_against(self, other)
+ |      Check if this Pokemon is weak against
+ |      another Pokemon.
+ |  
+ |  level_up(self)
+ |      Level up this Pokemon.
+ |  
+ |  print_info(self)
+ |      Print info on this Pokemon.
  |  
  |  ----------------------------------------------------------------------
  |  Data descriptors defined here:
@@ -22933,7 +22940,8 @@ class Bird(builtins.object)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[196]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Bird</span><span class="o">.</span><span class="n">is_species</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use help on a specific function</span>
+<span class="n">help</span><span class="p">(</span><span class="n">Pokemon</span><span class="o">.</span><span class="n">is_weak_against</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -22953,10 +22961,11 @@ class Bird(builtins.object)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Help on function is_species in module __main__:
+<pre>Help on function is_weak_against in module __main__:
 
-is_species(self, species)
-    Check if this Bird is of the given species.
+is_weak_against(self, other)
+    Check if this Pokemon is weak against
+    another Pokemon.
 
 </pre>
 </div>
@@ -22972,7 +22981,9 @@ is_species(self, species)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[197]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Bird</span><span class="o">.</span><span class="n">is_species</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># As said before, the doc is stored in the __doc__</span>
+<span class="c1"># attribute</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Pokemon</span><span class="o">.</span><span class="n">is_weak_against</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -22992,7 +23003,69 @@ is_species(self, species)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Check if this Bird is of the given species.
+<pre>Check if this Pokemon is weak against
+        another Pokemon.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[198]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make another instance with different attributes,</span>
+<span class="c1"># eg, a water type Pokemon</span>
+<span class="n">squirtle</span> <span class="o">=</span> <span class="n">Pokemon</span><span class="p">(</span><span class="s1">&#39;Squirtle&#39;</span><span class="p">,</span> <span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+                   <span class="c1"># Water is strong against fire</span>
+                   <span class="p">(</span><span class="s1">&#39;fire&#39;</span><span class="p">,),</span>
+                   <span class="c1"># Water is weak against electric</span>
+                   <span class="p">(</span><span class="s1">&#39;electric&#39;</span><span class="p">,))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[199]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call some functions</span>
+<span class="n">squirtle</span><span class="o">.</span><span class="n">print_info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Squirtle:
+- Type: water
+- Level: 1
+- Strong against: fire
+- Weak against: electric
+
 </pre>
 </div>
 </div>
@@ -23004,14 +23077,10 @@ is_species(self, species)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[198]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[200]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make another instance with different attributes.</span>
-
-<span class="n">swallow</span> <span class="o">=</span> <span class="n">Bird</span><span class="p">(</span><span class="s1">&#39;Swallow&#39;</span><span class="p">)</span>
-<span class="n">swallow</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">swallow</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">squirtle</span><span class="o">.</span><span class="n">increase_exp</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23031,8 +23100,7 @@ is_species(self, species)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species: Swallow
-Swallow
+<pre>Squirtle grew to level 2
 </pre>
 </div>
 </div>
@@ -23071,30 +23139,45 @@ Swallow
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[199]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[201]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Swallow</span><span class="p">(</span><span class="n">Bird</span><span class="p">)</span> <span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;A class describing a Swallow.&#39;&#39;&#39;</span>
-    
-    <span class="c1"># Re-implement the constructor.</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocity</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the velocity of the Swallow.&#39;&#39;&#39;</span>
-
-        <span class="c1"># Access methods of the base class, eg</span>
-        <span class="c1"># the constructor. Note that &#39;self&#39; isn&#39;t</span>
-        <span class="c1"># passed here.</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Swallow&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Write a derived class for Charmander</span>
+<span class="k">class</span> <span class="nc">Charmander</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Describes all Charmanders.&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charmander&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Initialise a Charmander. Just needs the level</span>
+<span class="sd">        and optionally a name.&#39;&#39;&#39;</span>
+        <span class="c1"># Use super to call __init__ of the Pokemon</span>
+        <span class="c1"># base class.</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Charmander&#39;</span><span class="p">,</span> <span class="s1">&#39;fire&#39;</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                                        <span class="p">(</span><span class="s1">&#39;grass&#39;</span><span class="p">,</span> <span class="s1">&#39;ice&#39;</span><span class="p">),</span>
+                                        <span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;rock&#39;</span><span class="p">))</span>
+        <span class="c1"># Assign a new attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">petname</span> <span class="o">=</span> <span class="n">name</span>
         
-        <span class="c1"># Add new attributes.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span>
-        
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Swallow&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up Charmander.&#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander learned &quot;ember&quot;!&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander evolved into Charmeleon!&#39;</span><span class="p">)</span>
+</pre></div>
 
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Airspeed-velocity (unladen): &#39;</span>
-              <span class="s1">&#39;</span><span class="si">{:.2g}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="p">))</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[202]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Instantiate as before.</span>
+<span class="n">charmander</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23105,12 +23188,11 @@ Swallow
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[200]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[203]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Instantiate as before.</span>
-<span class="n">swallow</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">3.43</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">swallow</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check its attributes</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">charmander</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -23130,7 +23212,7 @@ Swallow
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;about_me&#39;, &#39;get_species&#39;, &#39;is_species&#39;, &#39;species&#39;, &#39;velocity&#39;]
+<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;category&#39;, &#39;experience&#39;, &#39;increase_exp&#39;, &#39;is_strong_against&#39;, &#39;is_weak_against&#39;, &#39;level&#39;, &#39;level_up&#39;, &#39;name&#39;, &#39;petname&#39;, &#39;print_info&#39;, &#39;strongAgainst&#39;, &#39;weakAgainst&#39;]
 </pre>
 </div>
 </div>
@@ -23143,20 +23225,20 @@ Swallow
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>You can see that the derived class has all the attributes of the base class, and the additional <code>velocity</code> attribute.</li>
+<li>You can see that the derived class has all the attributes of the base class, and the additional <code>petname</code> attribute.</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[201]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[204]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now call some functions.</span>
-<span class="c1"># This uses the definition in the Bird base class.</span>
+<span class="c1"># This uses the definition in the Pokemon base class.</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">swallow</span><span class="o">.</span><span class="n">is_species</span><span class="p">(</span><span class="s1">&#39;Duck&#39;</span><span class="p">))</span>
+<span class="n">charmander</span><span class="o">.</span><span class="n">is_strong_against</span><span class="p">(</span><span class="n">squirtle</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23172,13 +23254,15 @@ Swallow
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[204]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>False
-</pre>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>False</pre>
 </div>
+
 </div>
 
 </div>
@@ -23188,12 +23272,13 @@ Swallow
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[202]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[205]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># While this uses the definition in the Swallow derived class.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># When level_up is called, it uses the version</span>
+<span class="c1"># defined in the Charmander derived class.</span>
 
-<span class="n">swallow</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
+<span class="n">charmander</span><span class="o">.</span><span class="n">increase_exp</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23213,8 +23298,8 @@ Swallow
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species: Swallow
-Airspeed-velocity (unladen): 3.4 m/s
+<pre>Charmander grew to level 4
+Charmander learned &#34;ember&#34;!
 </pre>
 </div>
 </div>
@@ -23239,12 +23324,12 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[203]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[206]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Eg, this typo passes silently:</span>
 
-<span class="n">swallow</span><span class="o">.</span><span class="n">veloctiy</span> <span class="o">=</span> <span class="mf">8.9</span>
+<span class="n">charmander</span><span class="o">.</span><span class="n">naem</span> <span class="o">=</span> <span class="s1">&#39;Bob&#39;</span>
 </pre></div>
 
      </div>
@@ -23255,10 +23340,10 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[204]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[207]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swallow</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">charmander</span><span class="o">.</span><span class="n">print_info</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -23278,8 +23363,12 @@ Airspeed-velocity (unladen): 3.4 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species: Swallow
-Airspeed-velocity (unladen): 3.4 m/s
+<pre>Charmander:
+- Type: fire
+- Level: 4
+- Strong against: grass, ice
+- Weak against: water, rock
+
 </pre>
 </div>
 </div>
@@ -23291,10 +23380,10 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[205]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[208]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">swallow</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">charmander</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -23314,7 +23403,7 @@ Airspeed-velocity (unladen): 3.4 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;about_me&#39;, &#39;get_species&#39;, &#39;is_species&#39;, &#39;species&#39;, &#39;velocity&#39;, &#39;veloctiy&#39;]
+<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;category&#39;, &#39;experience&#39;, &#39;increase_exp&#39;, &#39;is_strong_against&#39;, &#39;is_weak_against&#39;, &#39;level&#39;, &#39;level_up&#39;, &#39;naem&#39;, &#39;name&#39;, &#39;petname&#39;, &#39;print_info&#39;, &#39;strongAgainst&#39;, &#39;weakAgainst&#39;]
 </pre>
 </div>
 </div>
@@ -23335,31 +23424,68 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[206]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[209]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Redefine the class with __slots__.</span>
 
-<span class="k">class</span> <span class="nc">Bird</span> <span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;A class to describe bird characteristics.&#39;&#39;&#39;</span>
-
-    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">,)</span>
+<span class="k">class</span> <span class="nc">Pokemon</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Basic class describing a Pokemon&#39;&#39;&#39;</span>
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the species of this Bird.&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+    <span class="c1"># Define the allowed attributes</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;level&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;experience&#39;</span><span class="p">,</span> <span class="s1">&#39;strongAgainst&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;weakAgainst&#39;</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Bird&#39;&#39;&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                <span class="n">strongAgainst</span><span class="p">,</span> <span class="n">weakAgainst</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Takes the category of the Pokemon (eg, fire/water),</span>
+<span class="sd">        level, strengths and weaknesses.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">category</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Copy the lists of strengths/weaknesses into new tuples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">strongAgainst</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">weakAgainst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">is_strong_against</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Check if this Pokemon is strong against</span>
+<span class="sd">        another Pokemon.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span>
     
-    <span class="k">def</span> <span class="nf">get_species</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Get the species of this Bird&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span>
+    <span class="k">def</span> <span class="nf">is_weak_against</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Check if this Pokemon is weak against</span>
+<span class="sd">        another Pokemon.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span>
     
-    <span class="k">def</span> <span class="nf">is_species</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Check if this Bird is of the given species.&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="n">species</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_species</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">increase_exp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exp</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Increase the experience of this Pokemon and</span>
+<span class="sd">        possibly level up.&#39;&#39;&#39;</span>
+        <span class="c1"># Gradually increase experience and level up as</span>
+        <span class="c1"># necessary.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+            
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up this Pokemon.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;grew to level&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">print_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Print info on this Pokemon.&#39;&#39;&#39;</span>
+        <span class="nb">print</span><span class="p">((</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Type: </span><span class="si">{1}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Level: </span><span class="si">{2}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Strong against: </span><span class="si">{3}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Weak against: </span><span class="si">{4}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">,</span>
+                                               <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span><span class="p">),</span>
+                                               <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -23370,28 +23496,36 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[207]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Similarly for the derived class.</span>
 
-<span class="k">class</span> <span class="nc">Swallow</span><span class="p">(</span><span class="n">Bird</span><span class="p">)</span> <span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;A class describing a Swallow.&#39;&#39;&#39;</span>
+<span class="k">class</span> <span class="nc">Charmander</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Describes all Charmanders.&#39;&#39;&#39;</span>
     
-    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">,)</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocity</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the velocity of the Swallow.&#39;&#39;&#39;</span>
-
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Swallow&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span>
+    <span class="c1"># Note that you only need to list the attributes</span>
+    <span class="c1"># added in the derived class</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;petname&#39;</span><span class="p">,)</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charmander&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Initialise a Charmander. Just needs the level</span>
+<span class="sd">        and optionally a name.&#39;&#39;&#39;</span>
+        <span class="c1"># Use super to call __init__ of the Pokemon</span>
+        <span class="c1"># base class.</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Charmander&#39;</span><span class="p">,</span> <span class="s1">&#39;fire&#39;</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                                        <span class="p">(</span><span class="s1">&#39;grass&#39;</span><span class="p">,</span> <span class="s1">&#39;ice&#39;</span><span class="p">),</span>
+                                        <span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;rock&#39;</span><span class="p">))</span>
+        <span class="c1"># Assign a new attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">petname</span> <span class="o">=</span> <span class="n">name</span>
         
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Swallow&#39;&#39;&#39;</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Airspeed-velocity (unladen): &#39;</span>
-              <span class="s1">&#39;</span><span class="si">{:.2g}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="p">))</span>
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up Charmander.&#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander learned &quot;ember&quot;!&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander evolved into Charmeleon!&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23402,13 +23536,13 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[208]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[211]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now we get an exception from the typo.</span>
 
-<span class="n">swallow</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">3.43</span><span class="p">)</span>
-<span class="n">swallow</span><span class="o">.</span><span class="n">veloctiy</span> <span class="o">=</span> <span class="mf">8.9</span>
+<span class="n">charmander</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">charmander</span><span class="o">.</span><span class="n">naem</span> <span class="o">=</span> <span class="s1">&#39;Bob&#39;</span>
 </pre></div>
 
      </div>
@@ -23431,12 +23565,12 @@ Airspeed-velocity (unladen): 3.4 m/s
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-420e60e7fe42&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-1-18493b0d85ad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> swallow <span class="ansi-blue-fg">=</span> Swallow<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3.43</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>swallow<span class="ansi-blue-fg">.</span>veloctiy <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">8.9</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> charmander <span class="ansi-blue-fg">=</span> Charmander<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>charmander<span class="ansi-blue-fg">.</span>naem <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;Bob&#39;</span>
 
-<span class="ansi-red-fg">AttributeError</span>: &#39;Swallow&#39; object has no attribute &#39;veloctiy&#39;</pre>
+<span class="ansi-red-fg">AttributeError</span>: &#39;Charmander&#39; object has no attribute &#39;naem&#39;</pre>
 </div>
 </div>
 
@@ -23469,33 +23603,41 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[209]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[212]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Swallow</span><span class="p">(</span><span class="n">Bird</span><span class="p">)</span> <span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;A class describing a Swallow.&#39;&#39;&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Charmander</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Describes all Charmanders.&#39;&#39;&#39;</span>
     
-    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">,)</span>
-
-    <span class="c1"># This is a class attribute</span>
+    <span class="c1"># Note that you only need to list the attributes</span>
+    <span class="c1"># added in the derived class</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;petname&#39;</span><span class="p">,)</span>
+    
+    <span class="c1"># Define a class attribute</span>
     <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span>
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocity</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the velocity of the Swallow.&#39;&#39;&#39;</span>
-
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Swallow&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span>
-        <span class="c1"># Access the class attribute using the class name or </span>
-        <span class="c1"># an instance of the class as prefix.</span>
-        <span class="k">if</span> <span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initialised a swallow:&#39;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
-            
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Swallow&#39;&#39;&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Airspeed-velocity (unladen): &#39;</span>
-              <span class="s1">&#39;</span><span class="si">{:.2g}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="p">))</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charmander&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Initialise a Charmander. Just needs the level</span>
+<span class="sd">        and optionally a name.&#39;&#39;&#39;</span>
+        <span class="c1"># Use super to call __init__ of the Pokemon</span>
+        <span class="c1"># base class.</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Charmander&#39;</span><span class="p">,</span> <span class="s1">&#39;fire&#39;</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                                        <span class="p">(</span><span class="s1">&#39;grass&#39;</span><span class="p">,</span> <span class="s1">&#39;ice&#39;</span><span class="p">),</span>
+                                        <span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;rock&#39;</span><span class="p">))</span>
+        <span class="c1"># Assign a new attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">petname</span> <span class="o">=</span> <span class="n">name</span>
+        
+        <span class="k">if</span> <span class="n">Charmander</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Made a new Charmander&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">print_info</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up Charmander.&#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander learned &quot;ember&quot;!&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander evolved into Charmeleon!&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23506,15 +23648,17 @@ Airspeed-velocity (unladen): 3.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[213]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can access class attributes through the class itself</span>
-<span class="c1"># or through instances of the class, they both refer to the</span>
+<span class="c1"># or through instances of the class, they all refer to the</span>
 <span class="c1"># same object.</span>
-<span class="n">swallow1</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">9.2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">swallow1</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">swallow1</span><span class="o">.</span><span class="n">verbose</span><span class="p">))</span>
+<span class="n">charmander1</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">charmander2</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">charmander1</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">charmander1</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">charmander2</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+      <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">Charmander</span><span class="o">.</span><span class="n">verbose</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -23534,8 +23678,8 @@ Airspeed-velocity (unladen): 3.4 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>False 4552788320
-False 4552788320
+<pre>False
+True
 </pre>
 </div>
 </div>
@@ -23547,14 +23691,14 @@ False 4552788320
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[211]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[214]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change the value of the class attribute like so:</span>
 <span class="c1"># (to change the value for all class instances this</span>
 <span class="c1"># has to be done via the class itself)</span>
-<span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">swallow2</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">5.4</span><span class="p">)</span>
+<span class="n">Charmander</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">charmander3</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23574,9 +23718,13 @@ False 4552788320
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Initialised a swallow:
-Species: Swallow
-Airspeed-velocity (unladen): 5.4 m/s
+<pre>Made a new Charmander
+Charmander:
+- Type: fire
+- Level: 1
+- Strong against: grass, ice
+- Weak against: water, rock
+
 </pre>
 </div>
 </div>
@@ -23588,14 +23736,14 @@ Airspeed-velocity (unladen): 5.4 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[212]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[215]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The value of the attribute is the same for all instances </span>
 <span class="c1"># of the class.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Swallow</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">swallow1</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">swallow2</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Charmander</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">charmander1</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">charmander2</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -23632,6 +23780,18 @@ True
 <ul>
 <li>There are also functions for more versatile and efficient attribute access through "descriptors" using <a href="https://docs.python.org/3/library/functions.html#property"><code>property</code></a>, as well as static and class function definitions through <a href="https://docs.python.org/3/library/functions.html#staticmethod"><code>staticmethod</code></a> and <a href="https://docs.python.org/3/library/functions.html#classmethod"><code>classmethod</code></a>.</li>
 </ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src = 'https://i.redd.it/c8cw76gmohy11.jpg' alt = 'ancient code' width = 400></p>
 
 </div>
 </div>
@@ -23707,7 +23867,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[213]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[216]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The built-in math module</span>
@@ -23745,7 +23905,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[214]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[217]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call a method or access a variable contained in a module</span>
@@ -23796,7 +23956,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[215]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[218]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import a specific function/variable from a module.</span>
@@ -23839,7 +23999,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[216]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[219]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can also rename a variable at import using the</span>
@@ -23879,7 +24039,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[217]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[220]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import everything from a module into the current</span>
@@ -23923,7 +24083,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[218]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[221]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import a sub-module from a module.</span>
@@ -23961,7 +24121,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[219]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[222]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import a method/variable from a sub-module.</span>
@@ -24008,7 +24168,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[220]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[223]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The __import__ method actually returns the module.</span>
@@ -24047,7 +24207,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[221]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[224]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If you alternatively want to use the cmath module,</span>
@@ -24096,7 +24256,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[222]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[225]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
@@ -24133,7 +24293,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[223]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[226]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Executing the same code after importing the numpy array </span>
@@ -24211,7 +24371,7 @@ True
 <ul>
 <li>Any python script can be imported as a module.</li>
 <li>The module name is simply the name of the file.</li>
-<li>Eg, putting the <code>Bird</code> and <code>Swallow</code> class definitions in a file called Birds.py.</li>
+<li>Eg, putting the <code>Pokemon</code> and <code>Charmander</code> class definitions in a file called Pokemon.py.</li>
 <li>In a Jupyter notebook, putting <code>%%writefile &lt;fname&gt;</code> at the top of a cell will write the contents of the cell to a file named <code>&lt;fname&gt;</code>:</li>
 </ul>
 
@@ -24219,50 +24379,104 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[224]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[227]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> Birds.py 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> Pokemon.py 
 
-<span class="sd">&#39;&#39;&#39;A set of classes to describe different species of bird.&#39;&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39;A set of classes to describe different Pokemon.&#39;&#39;&#39;</span>
 
-<span class="k">class</span> <span class="nc">Bird</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;A class to describe bird characteristics.&#39;&#39;&#39;</span>
 
-    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">,)</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the species of this Bird.&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
-
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Bird&#39;&#39;&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">get_species</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Get the species of this Bird&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span>
-
-    <span class="k">def</span> <span class="nf">is_species</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">species</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Check if this Bird is of the given species.&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="n">species</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_species</span><span class="p">()</span>
-
-<span class="k">class</span> <span class="nc">Swallow</span><span class="p">(</span><span class="n">Bird</span><span class="p">)</span> <span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;A class describing a Swallow.&#39;&#39;&#39;</span>
-
-    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">,)</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">velocity</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Constructor. Sets the velocity of the Swallow.&#39;&#39;&#39;</span>
-
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Swallow&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span>
-
-    <span class="k">def</span> <span class="nf">about_me</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;Print info about this Swallow&#39;&#39;&#39;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Species:&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Airspeed-velocity (unladen): &#39;</span>
-              <span class="s1">&#39;</span><span class="si">{:.2g}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocity</span><span class="p">))</span>
+<span class="k">class</span> <span class="nc">Pokemon</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Basic class describing a Pokemon&#39;&#39;&#39;</span>
+    
+    <span class="c1"># Define the allowed attributes</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;level&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;experience&#39;</span><span class="p">,</span> <span class="s1">&#39;strongAgainst&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;weakAgainst&#39;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                <span class="n">strongAgainst</span><span class="p">,</span> <span class="n">weakAgainst</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Takes the category of the Pokemon (eg, fire/water),</span>
+<span class="sd">        level, strengths and weaknesses.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">category</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># Copy the lists of strengths/weaknesses into new tuples</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">strongAgainst</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">weakAgainst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">is_strong_against</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Check if this Pokemon is strong against</span>
+<span class="sd">        another Pokemon.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span>
+    
+    <span class="k">def</span> <span class="nf">is_weak_against</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Check if this Pokemon is weak against</span>
+<span class="sd">        another Pokemon.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">other</span><span class="o">.</span><span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span>
+    
+    <span class="k">def</span> <span class="nf">increase_exp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exp</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Increase the experience of this Pokemon and</span>
+<span class="sd">        possibly level up.&#39;&#39;&#39;</span>
+        <span class="c1"># Gradually increase experience and level up as</span>
+        <span class="c1"># necessary.</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+            
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up this Pokemon.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experience</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;grew to level&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">print_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Print info on this Pokemon.&#39;&#39;&#39;</span>
+        <span class="nb">print</span><span class="p">((</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Type: </span><span class="si">{1}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Level: </span><span class="si">{2}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Strong against: </span><span class="si">{3}</span><span class="se">\n</span><span class="s1">&#39;</span>
+               <span class="s1">&#39;- Weak against: </span><span class="si">{4}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">,</span>
+                                               <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strongAgainst</span><span class="p">),</span>
+                                               <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weakAgainst</span><span class="p">)))</span>
+        
+<span class="k">class</span> <span class="nc">Charmander</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Describes all Charmanders.&#39;&#39;&#39;</span>
+    
+    <span class="c1"># Note that you only need to list the attributes</span>
+    <span class="c1"># added in the derived class</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;petname&#39;</span><span class="p">,)</span>
+    
+    <span class="c1"># Define a class attribute</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charmander&#39;</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Initialise a Charmander. Just needs the level</span>
+<span class="sd">        and optionally a name.&#39;&#39;&#39;</span>
+        <span class="c1"># Use super to call __init__ of the Pokemon</span>
+        <span class="c1"># base class.</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;Charmander&#39;</span><span class="p">,</span> <span class="s1">&#39;fire&#39;</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span>
+                                        <span class="p">(</span><span class="s1">&#39;grass&#39;</span><span class="p">,</span> <span class="s1">&#39;ice&#39;</span><span class="p">),</span>
+                                        <span class="p">(</span><span class="s1">&#39;water&#39;</span><span class="p">,</span> <span class="s1">&#39;rock&#39;</span><span class="p">))</span>
+        <span class="c1"># Assign a new attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">petname</span> <span class="o">=</span> <span class="n">name</span>
+        
+        <span class="k">if</span> <span class="n">Charmander</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Made a new Charmander&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">print_info</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">level_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Level up Charmander.&#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Charmander</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">level_up</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander learned &quot;ember&quot;!&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charmander evolved into Charmeleon!&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24282,7 +24496,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Overwriting Birds.py
+<pre>Overwriting Pokemon.py
 </pre>
 </div>
 </div>
@@ -24291,17 +24505,15 @@ True
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[225]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[228]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then we can import it.</span>
 
-<span class="kn">import</span> <span class="nn">Birds</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Birds</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Birds</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">Pokemon</span>
 </pre></div>
 
      </div>
@@ -24309,39 +24521,17 @@ True
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Birds
-/Users/michaelalexander/cernbox/teaching/SUPAPYT/IntroductionToPython/Birds.py
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[226]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[229]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The string at the top of the file is the doc string</span>
 <span class="c1"># for the module itself.</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">Birds</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Birds</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Pokemon</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24361,8 +24551,8 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>A set of classes to describe different species of bird.
-[&#39;Bird&#39;, &#39;Swallow&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
+<pre>A set of classes to describe different Pokemon.
+[&#39;Charmander&#39;, &#39;Pokemon&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
 </pre>
 </div>
 </div>
@@ -24377,8 +24567,8 @@ True
 <ul>
 <li>So by putting variable/method/class definitions into separate files you create modules that can be imported and re-used.</li>
 <li>The environment variable <code>PYTHONPATH</code> is a list of directories where python looks for modules.<ul>
-<li>We can import the <code>Birds</code> module because the file <code>Birds.py</code> is in our current working directory.</li>
-<li>If we wanted to <code>import Birds</code> when working in another directory we'd need to add the directory containing <code>Birds.py</code> to <code>PYTHONPATH</code>.</li>
+<li>We can import the <code>Pokemon</code> module because the file <code>Pokemon.py</code> is in our current working directory.</li>
+<li>If we wanted to <code>import Pokemon</code> when working in another directory we'd need to add the directory containing <code>Pokemon.py</code> to <code>PYTHONPATH</code>.</li>
 <li>Any python modules in directories contained in <code>PYTHONPATH</code> are thus available system wide.</li>
 </ul>
 </li>
@@ -24397,7 +24587,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[227]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[230]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -24434,7 +24624,7 @@ True
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>As an example, we can move <code>Birds.py</code> to another directory, say called <code>Ornothology</code>, and rename it to <code>OtherBirds.py</code>.</li>
+<li>As an example, we can move <code>Pokemon.py</code> to another directory, say called <code>PokemonRed</code>, and rename it to <code>NewPokemon.py</code>.</li>
 <li>We can do this using the <code>os</code> and <code>shutil</code> modules:</li>
 </ul>
 
@@ -24442,15 +24632,15 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[228]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[231]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">shutil</span>
 
-<span class="n">dirname</span> <span class="o">=</span> <span class="s1">&#39;Ornothology&#39;</span>
+<span class="n">dirname</span> <span class="o">=</span> <span class="s1">&#39;PokemonRed&#39;</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
-<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;Birds.py&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;OtherBirds.py&#39;</span><span class="p">))</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;Pokemon.py&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;NewPokemon.py&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24466,13 +24656,13 @@ True
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[228]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[231]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;Ornothology/OtherBirds.py&#39;</pre>
+<pre>&#39;PokemonRed/NewPokemon.py&#39;</pre>
 </div>
 
 </div>
@@ -24484,11 +24674,11 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[229]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[232]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This doesn&#39;t currently work.</span>
-<span class="kn">import</span> <span class="nn">OtherBirds</span>
+<span class="kn">import</span> <span class="nn">NewPokemon</span>
 </pre></div>
 
      </div>
@@ -24511,11 +24701,11 @@ True
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-d8012c1d0ff6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-1-02023314ad30&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># This doesn&#39;t currently work.</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> OtherBirds
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> NewPokemon
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;OtherBirds&#39;</pre>
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;NewPokemon&#39;</pre>
 </div>
 </div>
 
@@ -24526,12 +24716,12 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[230]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[233]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add the Ornothology directory to sys.path</span>
 
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;./Ornothology&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;./PokemonRed&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24542,12 +24732,12 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[231]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[234]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then we can import OtherBirds</span>
 
-<span class="kn">import</span> <span class="nn">OtherBirds</span>
+<span class="kn">import</span> <span class="nn">NewPokemon</span>
 </pre></div>
 
      </div>
@@ -24558,13 +24748,13 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[232]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[235]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># It contains the same functionality as </span>
-<span class="c1"># Birds.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># It just contains the same functionality as </span>
+<span class="c1"># Pokemon.</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">OtherBirds</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">NewPokemon</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24584,7 +24774,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;Bird&#39;, &#39;Swallow&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
+<pre>[&#39;Charmander&#39;, &#39;Pokemon&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
 </pre>
 </div>
 </div>
@@ -24620,14 +24810,14 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[233]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[236]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> -a Birds.py
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> -a Pokemon.py
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span> <span class="p">:</span>
-    <span class="n">sw</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">1.23</span><span class="p">)</span>
-    <span class="n">sw</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
+    <span class="n">charmander</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">charmander</span><span class="o">.</span><span class="n">print_info</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -24647,7 +24837,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Appending to Birds.py
+<pre>Appending to Pokemon.py
 </pre>
 </div>
 </div>
@@ -24662,17 +24852,17 @@ True
 <ul>
 <li>This section of code is only executed in the case that Birds.py is the main file passed to the python interpreter.</li>
 <li>In a Jupyter notebook, you can make system calls (as at the commandline) by prefixing a statement with <code>!</code>.</li>
-<li>So we can execute <code>Birds.py</code> as the main file by doing:</li>
+<li>So we can execute <code>Pokemon.py</code> as the main file by doing:</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[234]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[237]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python Birds.py
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python Pokemon.py
 </pre></div>
 
      </div>
@@ -24692,8 +24882,12 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species: Swallow
-Airspeed-velocity (unladen): 1.2 m/s
+<pre>Charmander:
+- Type: fire
+- Level: 1
+- Strong against: grass, ice
+- Weak against: water, rock
+
 </pre>
 </div>
 </div>
@@ -24706,7 +24900,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>However, when importing Birds into another script the <code>__name__</code> variable within <code>Birds</code> is set to <code>'Birds'</code>, not <code>'__main__'</code>, and we get no output.</li>
+<li>However, when importing <code>Pokemon</code> into another script the <code>__name__</code> variable within <code>Pokemon</code> is set to <code>'Pokemon'</code>, not <code>'__main__'</code>, and we get no output.</li>
 <li>Having imported a module, a second <code>import</code> of the same module does nothing. If the module has changed, you have to use <code>importlib.reload</code> (though this is very rare):</li>
 </ul>
 
@@ -24714,13 +24908,13 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[235]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[238]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">importlib</span>
 
 <span class="c1"># This gives no output.</span>
-<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">Birds</span><span class="p">)</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24736,13 +24930,13 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[235]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[238]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;module &#39;Birds&#39; from &#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/IntroductionToPython/Birds.py&#39;&gt;</pre>
+<pre>&lt;module &#39;Pokemon&#39; from &#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/IntroductionToPython/Pokemon.py&#39;&gt;</pre>
 </div>
 
 </div>
@@ -24780,26 +24974,26 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>We can turn the <code>Ornothology</code> directory into a package by adding a <code>__init__.py</code> file.</li>
-<li>Let's add the <code>Birds.py</code> module first:</li>
+<li>We can turn the <code>PokemonRed</code> directory into a package by adding a <code>__init__.py</code> file.</li>
+<li>Let's add the <code>Pokemon.py</code> module first:</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[236]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[239]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">shutil</span>
 
 <span class="c1"># Make the directory.</span>
-<span class="n">dirname</span> <span class="o">=</span> <span class="s1">&#39;Ornothology&#39;</span>
+<span class="n">dirname</span> <span class="o">=</span> <span class="s1">&#39;PokemonRed&#39;</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
     
-<span class="c1"># Copy Birds.py to the directory.</span>
-<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;Birds.py&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;Birds.py&#39;</span><span class="p">))</span>
+<span class="c1"># Copy Pokemon.py to the directory.</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;Pokemon.py&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;Pokemon.py&#39;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24815,13 +25009,13 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[236]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[239]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;Ornothology/Birds.py&#39;</pre>
+<pre>&#39;PokemonRed/Pokemon.py&#39;</pre>
 </div>
 
 </div>
@@ -24841,7 +25035,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[237]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[240]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;__init__.py&#39;</span><span class="p">),</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">finit</span> <span class="p">:</span>
@@ -24856,10 +25050,10 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[238]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[241]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the contents of Ornothology</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check the contents of PokemonRed</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dirname</span><span class="p">)</span>
 </pre></div>
@@ -24877,19 +25071,13 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[238]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[241]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;Birds.py&#39;,
- &#39;OtherBirds.py&#39;,
- &#39;__init__.py&#39;,
- &#39;__pycache__&#39;,
- &#39;__init__.pyc&#39;,
- &#39;Birds.pyc&#39;,
- &#39;OtherBirds.pyc&#39;]</pre>
+<pre>[&#39;__init__.py&#39;, &#39;NewPokemon.py&#39;, &#39;__pycache__&#39;, &#39;NewBirds.py&#39;, &#39;Pokemon.py&#39;]</pre>
 </div>
 
 </div>
@@ -24901,12 +25089,12 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[239]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[242]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now we can import the Ornothology package.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now we can import the PokemonRed package.</span>
 
-<span class="kn">import</span> <span class="nn">Ornothology</span>
+<span class="kn">import</span> <span class="nn">PokemonRed</span>
 </pre></div>
 
      </div>
@@ -24917,12 +25105,12 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[240]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[243]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Packages are treated identically to modules. </span>
 
-<span class="nb">type</span><span class="p">(</span><span class="n">Ornothology</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">PokemonRed</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24938,7 +25126,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[240]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[243]:</div>
 
 
 
@@ -24956,13 +25144,13 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[241]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[244]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import the Birds module from the Ornothology package</span>
 
-<span class="kn">from</span> <span class="nn">Ornothology</span> <span class="kn">import</span> <span class="n">Birds</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Birds</span><span class="p">))</span>
+<span class="kn">from</span> <span class="nn">PokemonRed</span> <span class="kn">import</span> <span class="n">Pokemon</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Pokemon</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24982,7 +25170,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;Bird&#39;, &#39;Swallow&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
+<pre>[&#39;Charmander&#39;, &#39;Pokemon&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
 </pre>
 </div>
 </div>
@@ -24994,14 +25182,14 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[242]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[245]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import the Swallow class from the OtherBirds submodule of </span>
-<span class="c1"># the Ornothology package.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import the Charmander class from the NewPokemon submodule of </span>
+<span class="c1"># the PokemonRed package.</span>
 
-<span class="kn">from</span> <span class="nn">Ornothology.OtherBirds</span> <span class="kn">import</span> <span class="n">Swallow</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Swallow</span><span class="p">))</span>
+<span class="kn">from</span> <span class="nn">PokemonRed.Pokemon</span> <span class="kn">import</span> <span class="n">Charmander</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">Charmander</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -25021,7 +25209,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__slots__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;about_me&#39;, &#39;get_species&#39;, &#39;is_species&#39;, &#39;species&#39;, &#39;velocity&#39;]
+<pre>[&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__slots__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;category&#39;, &#39;experience&#39;, &#39;increase_exp&#39;, &#39;is_strong_against&#39;, &#39;is_weak_against&#39;, &#39;level&#39;, &#39;level_up&#39;, &#39;name&#39;, &#39;petname&#39;, &#39;print_info&#39;, &#39;strongAgainst&#39;, &#39;verbose&#39;, &#39;weakAgainst&#39;]
 </pre>
 </div>
 </div>
@@ -25066,7 +25254,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[243]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[246]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open a file in write mode.</span>
@@ -25106,7 +25294,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[244]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[247]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can write to a file like so, for a single string.</span>
@@ -25128,7 +25316,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[244]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[247]:</div>
 
 
 
@@ -25146,7 +25334,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[245]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[248]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Or several strings at once, contained in a sequence:</span>
@@ -25162,7 +25350,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[246]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[249]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then close the file:</span>
@@ -25186,7 +25374,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[247]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[250]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then open the file and read its contents.</span>
@@ -25225,7 +25413,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[248]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[251]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># By reading all lines in the file the &quot;cursor&quot; </span>
@@ -25265,7 +25453,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[249]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[252]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can skip to a specific place in a file using </span>
@@ -25306,7 +25494,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[250]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[253]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another way to read the whole file is using &#39;read&#39;,</span>
@@ -25330,7 +25518,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[250]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[253]:</div>
 
 
 
@@ -25348,7 +25536,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[251]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[254]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternatively, you can read one line at a time</span>
@@ -25393,7 +25581,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[252]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[255]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Again, close the file when you&#39;re done with it.</span>
@@ -25409,7 +25597,7 @@ Airspeed-velocity (unladen): 1.2 m/s
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[253]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[256]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># You can also iterate directly over the lines </span>
@@ -25477,7 +25665,7 @@ Holy Grail
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[254]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[257]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open a file using &#39;with&#39; and write to it.</span>
@@ -25494,7 +25682,7 @@ Holy Grail
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[255]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[258]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note that the variable f is still in scope, but is</span>
@@ -25558,7 +25746,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[256]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[259]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets make a file.</span>
@@ -25577,7 +25765,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[257]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[260]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now open it.</span>
@@ -25657,7 +25845,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[258]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[261]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -25685,8 +25873,8 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>str : 2022-01-27
-repr: datetime.date(2022, 1, 27)
+<pre>str : 2022-01-31
+repr: datetime.date(2022, 1, 31)
 </pre>
 </div>
 </div>
@@ -25706,7 +25894,7 @@ repr: datetime.date(2022, 1, 27)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[259]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[262]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
@@ -25729,7 +25917,7 @@ repr: datetime.date(2022, 1, 27)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>2022-01-27
+<pre>2022-01-31
 </pre>
 </div>
 </div>
@@ -25741,7 +25929,7 @@ repr: datetime.date(2022, 1, 27)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[260]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[263]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">today</span>
@@ -25760,13 +25948,13 @@ repr: datetime.date(2022, 1, 27)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[260]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[263]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>datetime.date(2022, 1, 27)</pre>
+<pre>datetime.date(2022, 1, 31)</pre>
 </div>
 
 </div>
@@ -25787,7 +25975,7 @@ repr: datetime.date(2022, 1, 27)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[261]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[264]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">today</span><span class="p">))</span> <span class="o">==</span> <span class="n">today</span>
@@ -25806,7 +25994,7 @@ repr: datetime.date(2022, 1, 27)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[261]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[264]:</div>
 
 
 
@@ -25832,7 +26020,7 @@ repr: datetime.date(2022, 1, 27)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[262]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[265]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">today</span><span class="p">))</span> <span class="o">==</span> <span class="n">today</span>
@@ -25865,7 +26053,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 <span class="ansi-red-fg">    eval(str(today)) == today</span>
 
 <span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;string&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    2022-01-27</span>
+<span class="ansi-red-fg">    2022-01-31</span>
           ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
 </pre>
@@ -25895,7 +26083,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[263]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[266]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;savethedate.py&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fdate</span> <span class="p">:</span>
@@ -25921,7 +26109,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[264]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[267]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;savethedate.py&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fdate</span> <span class="p">:</span>
@@ -25946,7 +26134,7 @@ Traceback <span class="ansi-cyan-fg">(most recent call last)</span>:
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>import datetime
-today = datetime.date(2022, 1, 27)
+today = datetime.date(2022, 1, 31)
 
 </pre>
 </div>
@@ -25967,7 +26155,7 @@ today = datetime.date(2022, 1, 27)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[265]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[268]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">savethedate</span>
@@ -25992,7 +26180,7 @@ today = datetime.date(2022, 1, 27)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>2022-01-27
+<pre>2022-01-31
 True
 </pre>
 </div>
@@ -26033,7 +26221,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[266]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[269]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First write to a file with pickle.dump</span>
@@ -26060,7 +26248,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[267]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[270]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;savethedate.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fdate</span> <span class="p">:</span>
@@ -26084,7 +26272,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe6\x01\x1b\x94\x85\x94R\x94.&#39;
+<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe6\x01\x1f\x94\x85\x94R\x94.&#39;
 </pre>
 </div>
 </div>
@@ -26105,7 +26293,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[268]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[271]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">today_str</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
@@ -26125,13 +26313,13 @@ True
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[268]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[271]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe6\x01\x1b\x94\x85\x94R\x94.&#39;</pre>
+<pre>b&#39;\x80\x04\x95 \x00\x00\x00\x00\x00\x00\x00\x8c\x08datetime\x94\x8c\x04date\x94\x93\x94C\x04\x07\xe6\x01\x1f\x94\x85\x94R\x94.&#39;</pre>
 </div>
 
 </div>
@@ -26151,7 +26339,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[269]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[272]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load from the file.</span>
@@ -26190,7 +26378,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[270]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[273]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load from a string.</span>
@@ -26236,14 +26424,14 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[271]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[274]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">Ornothology.Birds</span> <span class="kn">import</span> <span class="n">Swallow</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PokemonRed.Pokemon</span> <span class="kn">import</span> <span class="n">Charmander</span>
 
-<span class="n">s</span> <span class="o">=</span> <span class="n">Swallow</span><span class="p">(</span><span class="mf">8.23</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;PickledSwallow.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fpickle</span> <span class="p">:</span>
-    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">fpickle</span><span class="p">)</span>
+<span class="n">charmander</span> <span class="o">=</span> <span class="n">Charmander</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;PickledCharmander.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fpickle</span> <span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">charmander</span><span class="p">,</span> <span class="n">fpickle</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -26262,14 +26450,14 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[272]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[275]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Again, open the file in binary mode.</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;PickledSwallow.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fpickle</span> <span class="p">:</span>
-    <span class="n">s2</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fpickle</span><span class="p">)</span>
-<span class="n">s2</span><span class="o">.</span><span class="n">about_me</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="o">.</span><span class="n">velocity</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">velocity</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;PickledCharmander.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fpickle</span> <span class="p">:</span>
+    <span class="n">charmander2</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fpickle</span><span class="p">)</span>
+<span class="n">charmander2</span><span class="o">.</span><span class="n">print_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">charmander2</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="n">charmander</span><span class="o">.</span><span class="n">level</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -26289,8 +26477,12 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Species: Swallow
-Airspeed-velocity (unladen): 8.2 m/s
+<pre>Charmander:
+- Type: fire
+- Level: 34
+- Strong against: grass, ice
+- Weak against: water, rock
+
 True
 </pre>
 </div>
@@ -26334,7 +26526,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[273]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[276]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -26358,7 +26550,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpeh_s23t4.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
+<pre>[&#39;/Users/michaelalexander/cernbox/teaching/SUPAPYT/env/lib/python3.9/site-packages/ipykernel_launcher.py&#39;, &#39;-f&#39;, &#39;/private/var/folders/5d/tl169y4d7zd35k3m0k3wtr7r0000gn/T/tmpyocdoo0l.json&#39;, &#39;--HistoryManager.hist_file=:memory:&#39;]
 </pre>
 </div>
 </div>
@@ -26389,7 +26581,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[274]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[277]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> listdir.py
@@ -26436,7 +26628,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[275]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[278]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python listdir.py ~/cernbox
@@ -26514,7 +26706,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[276]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[279]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">roderick</span><span class="p">)</span>
@@ -26554,7 +26746,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[277]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[280]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
@@ -26594,7 +26786,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[278]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[281]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -26636,7 +26828,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[279]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[282]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
@@ -26676,7 +26868,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[280]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[283]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Don&#39;</span><span class="n">t</span> <span class="n">forget</span> <span class="n">to</span> <span class="n">escape</span><span class="o">!</span><span class="err">&#39;</span>
@@ -26715,7 +26907,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[281]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[284]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">spam</span>
@@ -26765,7 +26957,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[282]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[285]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
@@ -26809,7 +27001,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[283]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[286]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="ne">Exception</span><span class="p">)</span>
@@ -26938,7 +27130,7 @@ class Exception(BaseException)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[284]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[287]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_inverse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -26961,7 +27153,7 @@ class Exception(BaseException)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[285]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[288]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="mf">6.</span><span class="p">)</span>
@@ -26996,7 +27188,7 @@ class Exception(BaseException)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[286]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[289]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="s1">&#39;6.&#39;</span><span class="p">)</span>
@@ -27031,7 +27223,7 @@ class Exception(BaseException)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[287]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[290]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
@@ -27074,7 +27266,7 @@ class Exception(BaseException)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[288]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[291]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_inverse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -27092,7 +27284,7 @@ class Exception(BaseException)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[289]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[292]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="mf">6.</span><span class="p">)</span>
@@ -27140,7 +27332,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[290]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[293]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_inverse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>
@@ -27161,7 +27353,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[291]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[294]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_inverse</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
@@ -27236,7 +27428,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[292]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[295]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So this:</span>
@@ -27252,7 +27444,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[293]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[296]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Becomes this:</span>
@@ -27267,7 +27459,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[294]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[297]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then call it like any other function</span>
@@ -27303,7 +27495,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[295]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[298]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A lambda function with two arguments:</span>
@@ -27318,7 +27510,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[296]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[299]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_of_squares</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -27337,7 +27529,7 @@ That didn&#39;t work!
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[296]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[299]:</div>
 
 
 
@@ -27363,7 +27555,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[297]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[300]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Declare and call a lambda method in the</span>
@@ -27384,7 +27576,7 @@ That didn&#39;t work!
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[297]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[300]:</div>
 
 
 
@@ -27411,7 +27603,7 @@ That didn&#39;t work!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[298]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[301]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">filter</span><span class="p">)</span>
@@ -27473,7 +27665,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[299]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[302]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So we could do:</span>
@@ -27497,7 +27689,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[299]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[302]:</div>
 
 
 
@@ -27515,7 +27707,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[300]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[303]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Or, using a lambda method:</span>
@@ -27536,7 +27728,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[300]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[303]:</div>
 
 
 
@@ -27567,7 +27759,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[301]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[304]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Map one sequence to another, element by element</span>
@@ -27589,7 +27781,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[301]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[304]:</div>
 
 
 
@@ -27607,7 +27799,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[302]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[305]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the sum of elements in a sequence.</span>
@@ -27628,7 +27820,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[302]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[305]:</div>
 
 
 
@@ -27646,7 +27838,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[303]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[306]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reduce a sequence via recursive method calls.</span>
@@ -27669,7 +27861,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[303]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[306]:</div>
 
 
 
@@ -27687,7 +27879,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[304]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[307]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sum only works for numerical types, but reduce</span>
@@ -27712,7 +27904,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[304]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[307]:</div>
 
 
 
@@ -27730,7 +27922,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[305]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[308]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternatively you can use the str.join method:</span>
@@ -27751,7 +27943,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[305]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[308]:</div>
 
 
 
@@ -27769,7 +27961,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[306]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[309]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Merge two or more sequences into a list of tuples.</span>
@@ -27790,7 +27982,7 @@ class filter(object)
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[306]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[309]:</div>
 
 
 
@@ -27808,7 +28000,7 @@ class filter(object)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[307]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[310]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;any&#39; and &#39;all&#39; builtins are useful to test a condition</span>
@@ -27875,7 +28067,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[308]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[311]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
@@ -27916,7 +28108,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[309]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[312]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Which is equivalent to :</span>
@@ -27966,7 +28158,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[310]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[313]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For a list:</span>
@@ -27987,7 +28179,7 @@ True
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[310]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[313]:</div>
 
 
 
@@ -28005,7 +28197,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[311]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[314]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Also for tuples:</span>
@@ -28026,7 +28218,7 @@ True
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[311]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[314]:</div>
 
 
 
@@ -28044,7 +28236,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[312]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[315]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For lists this can also be put in square brackets</span>
@@ -28066,7 +28258,7 @@ True
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[312]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[315]:</div>
 
 
 
@@ -28092,7 +28284,7 @@ True
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[313]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[316]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">tuple</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">2</span> == 0)
@@ -28111,7 +28303,7 @@ True
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[313]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[316]:</div>
 
 
 
