@@ -14507,9 +14507,8 @@ a.anchor-link {
     <span class="n">len1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">len1</span><span class="p">)</span>
     <span class="n">len2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">len2</span><span class="p">)</span>
     <span class="c1"># We cast to float in order to use float.is_integer</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">len1</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span> <span class="ow">and</span> <span class="n">len2</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()):</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="n">hypotenuse</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">len1</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span> <span class="ow">and</span> <span class="n">len2</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span>
+            <span class="ow">and</span> <span class="n">hypotenuse</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span><span class="o">.</span><span class="n">is_integer</span><span class="p">())</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">test_pythagorean_triple</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">test_pythagorean_triple</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">46</span><span class="p">))</span>
@@ -14574,18 +14573,22 @@ True
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">triples</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">len1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">for</span> <span class="n">len1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">):</span>
     <span class="c1"># To get only unique triples, make the second side longer than the</span>
     <span class="c1"># first (right angle triangles can&#39;t be triples).</span>
-    <span class="k">for</span> <span class="n">len2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">len2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="p">):</span>
         <span class="n">hyp</span> <span class="o">=</span> <span class="n">hypotenuse</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">hyp</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">hyp</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span> <span class="p">:</span>
-            <span class="n">triples</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">hyp</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">hyp</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">hyp</span><span class="o">.</span><span class="n">is_integer</span><span class="p">():</span>
+            <span class="c1"># Try the next pair of side lengths</span>
+            <span class="k">continue</span>
+        <span class="n">triples</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">hyp</span><span class="p">)))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Found&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">triples</span><span class="p">),</span> <span class="s1">&#39;pythagorean triples&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">,</span> <span class="n">hyp</span> <span class="ow">in</span> <span class="n">triples</span> <span class="p">:</span>
-    <span class="c1"># Print as integers with &#39;d&#39; suffix, with width 3</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:3d}</span><span class="s1"> </span><span class="si">{1:3d}</span><span class="s1"> </span><span class="si">{2:3d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">len1</span><span class="p">,</span> <span class="n">len2</span><span class="p">,</span> <span class="n">hyp</span><span class="p">))</span>
+    <span class="c1"># Print as integers with &#39;d&#39; suffix, with width 3.</span>
+    <span class="c1"># The &#39;f&#39; prefix means to call format using variables</span>
+    <span class="c1"># in the local namespace as keyword arguments.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">len1</span><span class="si">:</span><span class="s1">3d</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">len2</span><span class="si">:</span><span class="s1">3d</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">hyp</span><span class="si">:</span><span class="s1">3d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14605,7 +14608,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Found 50 pythagorean triples
+<pre>Found 52 pythagorean triples
   3   4   5
   5  12  13
   6   8  10
@@ -14635,6 +14638,7 @@ True
  25  60  65
  27  36  45
  28  45  53
+ 28  96 100
  30  40  50
  30  72  78
  32  60  68
@@ -14655,6 +14659,7 @@ True
  54  72  90
  57  76  95
  60  63  87
+ 60  80 100
  65  72  97
 </pre>
 </div>
@@ -14957,7 +14962,7 @@ True
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>4572210496 True
+<pre>4445182016 True
 </pre>
 </div>
 </div>
