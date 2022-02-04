@@ -14473,7 +14473,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>Try overriding one of the built-in types, like <code>list</code>, <code>int</code> or <code>str</code> by assigning it another value (normally you should avoid doing this).</li>
+<li>Try overriding one of the built-in types, like <code>list</code>, <code>int</code> or <code>str</code> by making a variable with that name (eg, <code>int = 3</code> - normally you should avoid doing this).</li>
 <li>Verify that the built-in type is lost.</li>
 <li>Can you recover it?</li>
 </ul>
@@ -14504,7 +14504,7 @@ a.anchor-link {
 <ul>
 <li>We've discussed briefly the idea of "mutable" and "immutable" objects in python.</li>
 <li>All basic types are immutable apart from lists and dictionaries.</li>
-<li>See what happens when you assign a variable to the same object, then change the original variable.<ul>
+<li>See what happens when you assign two variables to the same object, then change one of the variable.<ul>
 <li>Eg, assign two variables to the same <code>int</code> value, then change the value of one of the variables and check if it changes the value of the other variable.</li>
 <li>Try doing the same but assign a <code>list</code> instead of an <code>int</code>. Modify the the list (change/delete/add an element) and check the values of both variables.</li>
 </ul>
@@ -14531,7 +14531,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>In python the variable name and the object to which it refers are distinct.</li>
-<li>In c++ terms every variable in python is like a pointer.</li>
+<li>In C++ terms, every variable in python is like a pointer.</li>
 <li>For mutable objects you can access and modify the object via any variable assigned to it.</li>
 <li>For immutable objects any attempt to change the object either raises an exception or creates a new object and assigns it to the variable. </li>
 <li>The <code>id</code> built-in method returns a unique integer for every object (try <code>help(id)</code>) so you can use it to check if variables refer to the same object, or if an operation has modified an existing object or assigned a new object to the same variable.</li>
